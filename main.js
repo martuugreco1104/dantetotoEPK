@@ -953,4 +953,44 @@ document.addEventListener('DOMContentLoaded', () => {
       gigsCarousel.scrollLeft = scrollLeft - walk;
     });
   }
+
+  // 17. PRESS KIT COMPACT TABS CONTROLLER (Rider Specs vs Hospitality)
+  const presskitTabs = document.querySelectorAll('.presskit-tab-btn');
+  const presskitPanels = document.querySelectorAll('.presskit-tab-panel');
+
+  if (presskitTabs.length > 0) {
+    presskitTabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
+        
+        presskitTabs.forEach(t => {
+          t.classList.remove('active', 'border-[#39FF14]', 'text-white', 'bg-white/[0.08]');
+          t.classList.add('border-transparent', 'text-zinc-400', 'bg-transparent');
+          const dot = t.querySelector('.tab-indicator-dot');
+          if (dot) {
+            dot.classList.remove('bg-[#39FF14]');
+            dot.classList.add('bg-zinc-600');
+          }
+        });
+
+        btn.classList.add('active', 'border-[#39FF14]', 'text-white', 'bg-white/[0.08]');
+        btn.classList.remove('border-transparent', 'text-zinc-400', 'bg-transparent');
+        const activeDot = btn.querySelector('.tab-indicator-dot');
+        if (activeDot) {
+          activeDot.classList.remove('bg-zinc-600');
+          activeDot.classList.add('bg-[#39FF14]');
+        }
+
+        presskitPanels.forEach(panel => {
+          if (panel.id === targetTab) {
+            panel.classList.remove('hidden');
+            panel.classList.add('block');
+          } else {
+            panel.classList.add('hidden');
+            panel.classList.remove('block');
+          }
+        });
+      });
+    });
+  }
 });
