@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DANTE TOTO — Electronic Press Kit (EPK)</title>
+  <meta name="description" content="Official Electronic Press Kit for Dante Toto — Barcelona-based Argentine DJ & Electronic Artist. Indie Dance, Dark Tech House, Techno.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            neon: '#39FF14',
+            'neon-hover': '#32e010',
+            dark: '#050505',
+            card: '#0c0c0c',
+            'card-hover': '#141414',
+            borderSubtle: 'rgba(255, 255, 255, 0.08)',
+            borderMuted: 'rgba(255, 255, 255, 0.15)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#050505] text-zinc-300 font-sans antialiased selection:bg-[#39FF14] selection:text-black">
+
+  <!-- ========================================================= -->
+  <!-- A. HEADER / NAVBAR (Technical, minimal, functional)       -->
+  <!-- ========================================================= -->
+  <header class="fixed top-0 left-0 z-50 w-full bg-[#050505]/40 backdrop-blur-md border-b border-white/[0.06] transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-16 flex items-center justify-between">
+      <!-- Left: Brand Logo -->
+      <a href="#hero" class="flex items-center group py-2" title="Dante Toto EPK">
+        <img src="logos/DNT.png" alt="DANTE TOTO" class="h-6 sm:h-7 w-auto object-contain brightness-110 group-hover:opacity-85 transition-opacity" />
+      </a>
+
+      <!-- Center/Right: Curated Anchor Navigation -->
+      <div class="flex items-center gap-6">
+        <nav class="hidden md:flex items-center gap-6 text-[11px] font-mono tracking-widest text-zinc-400 uppercase">
+          <a href="#sounds" class="hover:text-white transition-colors duration-150 py-2 inline-flex items-center" data-i18n="navSounds">AUDIO</a>
+          <a href="#live" class="hover:text-white transition-colors duration-150 py-2 inline-flex items-center" data-i18n="navLive">EN VIVO</a>
+          <a href="#gigs" class="hover:text-white transition-colors duration-150 py-2 inline-flex items-center" data-i18n="navGigs">FECHAS</a>
+          <a href="#bio" class="hover:text-white transition-colors duration-150 py-2 inline-flex items-center" data-i18n="navBio">BIOGRAFÍA</a>
+          <a href="#presskit" class="hover:text-white transition-colors duration-150 py-2 inline-flex items-center" data-i18n="navPress">EPK / CONTACTO</a>
+        </nav>
+
+        <!-- Instagram Profile Link -->
+        <a href="https://www.instagram.com/dantetoto_/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-mono text-zinc-400 hover:text-white transition-colors py-2" title="Instagram @dantetoto_">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @dantetoto_
+        </a>
+
+        <!-- Extreme Right: Language Switcher [ES / EN] (Touch-Optimized WCAG 2.5.5) -->
+        <div class="flex items-center text-[10px] font-mono tracking-wider pl-3 sm:pl-4 border-l border-white/[0.08] text-zinc-500">
+          <button type="button" class="lang-btn text-white font-bold min-h-[44px] min-w-[36px] flex items-center justify-center px-2 py-1 transition-colors" data-lang="es">ES</button>
+          <span class="text-zinc-500 select-none">/</span>
+          <button type="button" class="lang-btn text-zinc-400 hover:text-white min-h-[44px] min-w-[36px] flex items-center justify-center px-2 py-1 transition-colors" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative bg-[#050505]">
+    <!-- ========================================================= -->
+    <!-- 1. HERO SECTION (Identidad + Wireframe 3D + Foto Orgánica) -->
+    <!-- ========================================================= -->
+    <section class="h-[85vh] md:h-[90vh] min-h-[640px] relative overflow-hidden bg-[#050505] border-b border-white/[0.08] flex items-center" id="hero">
+      
+      <!-- Marcos y Cruces de Mira Vectoriales en las 4 esquinas (Sin texto) -->
+      <div class="absolute top-5 left-6 z-30 pointer-events-none select-none">
+        <div class="w-3.5 h-3.5 border-t border-l border-[#39FF14]/70 flex items-center justify-center">
+          <span class="w-1 h-1 bg-[#39FF14] shadow-[0_0_6px_#39FF14]"></span>
+        </div>
+      </div>
+
+      <div class="absolute top-5 right-6 z-30 pointer-events-none select-none">
+        <div class="w-3.5 h-3.5 border-t border-r border-[#39FF14]/70 flex items-center justify-center">
+          <span class="w-1 h-1 bg-[#39FF14] shadow-[0_0_6px_#39FF14]"></span>
+        </div>
+      </div>
+
+      <div class="absolute bottom-5 left-6 z-30 pointer-events-none select-none">
+        <div class="w-3.5 h-3.5 border-b border-l border-[#39FF14]/70 flex items-center justify-center">
+          <span class="w-1 h-1 bg-[#39FF14] shadow-[0_0_6px_#39FF14]"></span>
+        </div>
+      </div>
+
+      <div class="absolute bottom-5 right-6 z-30 pointer-events-none select-none">
+        <div class="w-3.5 h-3.5 border-b border-r border-[#39FF14]/70 flex items-center justify-center">
+          <span class="w-1 h-1 bg-[#39FF14] shadow-[0_0_6px_#39FF14]"></span>
+        </div>
+      </div>
+
+      <!-- Grilla Líquida Deformable 3D en Tiempo Real (Canvas Interactivo) -->
+      <canvas id="heroMeshCanvas" class="absolute inset-0 w-full h-full pointer-events-none select-none z-[5]"></canvas>
+
+      <!-- Imagen de Fondo Hero: Dante Toto en cabina (PNG transparente en capa superior z-20) -->
+      <div class="absolute inset-0 md:left-auto md:right-0 w-full md:w-[52%] lg:w-[50%] h-full pointer-events-none select-none z-20 flex items-end justify-center md:justify-end overflow-hidden">
+        <img 
+          src="fotos/DANTE TOTO HERO 2.png" 
+          alt="Dante Toto en cabina" 
+          class="w-full h-full object-cover md:object-contain object-bottom md:object-right-bottom select-none hero-photo-framing drop-shadow-[0_0_40px_rgba(57,255,20,0.18)]"
+        />
+        <!-- Máscara de degradado para legibilidad en pantallas móviles -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/75 to-transparent md:hidden pointer-events-none"></div>
+      </div>
+
+      <!-- Contenedor Grilla Hero: 7 columnas para identidad y acciones, 5 columnas para la foto -->
+      <div class="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-10 py-12 md:py-0">
+        <div class="grid grid-cols-1 md:grid-cols-12 items-center">
+          
+          <!-- Columna Izquierda: Identidad, Botones y Redes Sociales Principales -->
+          <div class="md:col-span-7 flex flex-col justify-center">
+            
+            <!-- Logo Tipográfico Principal Gigante & Disponibilidad -->
+            <div class="w-full max-w-2xl">
+              <h1 class="sr-only" data-i18n="heroHeadline">DANTE TOTO</h1>
+              <img src="logos/Logo png hero.png" alt="DANTE TOTO" class="w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] h-auto object-contain object-left select-none filter brightness-125 drop-shadow-[0_0_35px_rgba(57,255,20,0.25)] drop-shadow-[0_8px_40px_rgba(0,0,0,0.95)]" />
+
+              <!-- Estatus / Disponibilidad de Booking justo debajo del logo, centrado y con alineación impecable -->
+              <div class="w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] flex justify-center mt-3.5 sm:mt-4">
+                <div class="inline-flex items-center gap-2.5 text-[10px] sm:text-[11px] font-mono tracking-[0.2em] text-zinc-300 uppercase select-none px-4 py-1.5 bg-[#0A0A0C]/70 backdrop-blur-md border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+                  <span class="relative flex h-2 w-2 shrink-0">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#39FF14] shadow-[0_0_8px_#39FF14]"></span>
+                  </span>
+                  <span data-i18n="heroEyebrow">DISPONIBLE PARA FECHAS // EUROPA · INTERNACIONAL</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fila de Acciones y Redes Sociales Principales (Alineada a la altura de las manos de Dante) -->
+            <div class="flex flex-wrap items-center gap-3.5 sm:gap-4 mt-12 sm:mt-16 md:mt-20 lg:mt-24 mb-6">
+              <!-- Botones de Acción -->
+              <button type="button" id="heroCtaPlayBtn" class="inline-flex items-center justify-center gap-2 bg-[#39FF14] hover:bg-[#32e010] text-black font-mono font-bold text-xs uppercase px-6 py-3.5 tracking-wider rounded-none transition-all shadow-[0_0_25px_rgba(57,255,20,0.6)] hover:shadow-[0_0_35px_rgba(57,255,20,0.85)] cursor-pointer select-none">
+                <span class="text-[10px]">▶</span>
+                <span data-i18n="heroCtaPlay">ESCUCHAR SET</span>
+              </button>
+
+              <a href="#contact" class="inline-flex items-center justify-center gap-1.5 border border-white/20 bg-black/60 hover:bg-white/10 hover:border-white text-white font-mono text-xs uppercase px-5 py-3.5 tracking-wider rounded-none transition-colors group">
+                <span data-i18n="heroCtaContact">CONTACTO</span>
+                <span class="text-zinc-400 group-hover:text-white transition-colors">→</span>
+              </a>
+
+              <!-- Separador vertical sutil -->
+              <span class="hidden sm:inline-block w-[1px] h-6 bg-white/15 mx-1"></span>
+
+              <!-- Iconos de Redes Sociales Principales -->
+              <div class="flex items-center gap-2">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/dantetoto_/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center border border-white/15 hover:border-[#39FF14] bg-black/60 hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="Instagram @dantetoto_">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <!-- SoundCloud -->
+                <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center border border-white/15 hover:border-[#39FF14] bg-black/60 hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="SoundCloud">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M1.17 12.22c-.04.28-.07.57-.07.86 0 .34.03.67.08.99l.86-.14v-2.02l-.87.31zm1.75-.49v3.39l.88-.19V11.3l-.88.43zm1.75-.43v4.11l.88-.23v-4.18l-.88.3zm1.75-.24v4.49l.87-.27v-4.39l-.87.17zm1.75.14v4.46l.88-.3v-4.23l-.88.07zm1.75.25v4.32l.88-.33v-3.95l-.88-.04zm1.75.12v4.29l.88-.35v-3.83l-.88-.11zm1.75-.68v5.04l.87-.37V9.75c-.32.22-.61.45-.87.69zm1.75-1.34v6.46l.88-.41V8.22c-.33.24-.62.5-.88.76zm1.75-.8v7.35l.87-.45V6.78c-.32.26-.61.54-.87.82zm1.75-.61v8.06l.88-.5V5.55c-.32.29-.62.59-.88.9zm1.75-.27v8.43l.87-.55V4.83c-.31.33-.6.67-.87 1.02zm1.75-.02v8.55l.88-.61V4.99c-.31.37-.59.75-.88 1.15zm2.63.15c-.21-.49-.47-.95-.76-1.37v9.42l1.63-.78c1.37-.66 2.05-1.87 2.05-3.63 0-2.01-.94-3.32-2.92-3.64z"/></svg>
+                </a>
+                <!-- Resident Advisor -->
+                <a href="https://es.ra.co/dj/dantetoto" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center border border-white/15 hover:border-[#39FF14] bg-black/60 hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="Resident Advisor">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4 4h4.5c3.03 0 5.5 2.47 5.5 5.5 0 2.08-1.16 3.89-2.88 4.82L16 20h-4l-4.5-5H6v5H4V4zm4.5 8c1.66 0 3-1.34 3-3s-1.34-3-3-3H6v6h2.5zm11.5-8h-3v16h3V4z"/></svg>
+                </a>
+                <!-- Spotify -->
+                <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center border border-white/15 hover:border-[#39FF14] bg-black/60 hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="Spotify">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.35-1.435-5.308-1.76-8.793-.963-.335.077-.67-.133-.746-.468-.077-.334.132-.67.467-.746 3.808-.87 7.076-.496 9.722 1.12.294.18.386.563.207.85zm1.226-2.724c-.227.368-.71.482-1.078.254-2.69-1.654-6.79-2.134-9.97-1.168-.413.125-.85-.106-.975-.52-.125-.413.106-.85.52-.974 3.632-1.102 8.147-.568 11.25 1.34.368.226.48.71.253 1.068zm.106-2.835C14.692 8.95 9.375 8.775 6.297 9.71c-.494.15-1.016-.128-1.166-.622-.15-.494.128-1.016.622-1.166 3.532-1.072 9.404-.866 13.115 1.338.445.264.59.838.327 1.282-.264.443-.838.59-1.282.323z"/></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Columna Derecha: Reserva visual de 5 columnas para la foto y consola de Dante -->
+          <div class="hidden md:block md:col-span-5 pointer-events-none"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea divisoria técnica interactiva con pulso VU-Meter -->
+    <div class="section-divider-tech"></div>
+
+    <!-- ========================================================= -->
+    <!-- 2. CENTRO DE CONTROL DE AUDIO (// ÚLTIMA SESIÓN)          -->
+    <!-- ========================================================= -->
+    <section class="border-b border-white/[0.08] bg-[#070709] py-6 sm:py-8 relative bg-tech-grid" id="sounds">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="bg-[#0A0A0C] border border-white/10 p-5 sm:p-6 shadow-[0_16px_40px_rgba(0,0,0,0.85)] spotlight-card">
+          
+          <!-- Fila Superior: Título del set, minutos, vumeters y links de música -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 mb-3 border-b border-white/[0.08]">
+            <div class="flex flex-wrap items-baseline gap-2.5">
+              <span class="text-[10px] font-mono font-bold text-[#39FF14] tracking-widest uppercase" data-i18n="playerSectionTitle">// ÚLTIMA SESIÓN</span>
+              <h2 class="text-base sm:text-lg font-bold text-white tracking-tight" data-i18n="playerSetTitle">
+                EN VIVO EN DETROIT CLUB BCN
+              </h2>
+              <span class="text-xs font-mono text-zinc-400">
+                • <span data-i18n="playerSetMeta">62 min • Dark Tech House & Indie Dance • Barcelona</span>
+              </span>
+            </div>
+
+            <!-- Vumeters y Links directos en la misma línea -->
+            <div class="flex items-center gap-4 text-[10px] font-mono select-none">
+              <!-- Telemetry Vumeters -->
+              <div class="hidden md:flex items-center gap-2.5 text-zinc-500 uppercase tracking-widest">
+                <span>-24dB</span>
+                <span>-12dB</span>
+                <span class="text-zinc-300">-6dB</span>
+                <span class="text-[#39FF14] font-semibold">0dB</span>
+                <span class="text-red-400">+3dB</span>
+              </div>
+              
+              <span class="hidden md:inline text-zinc-700">|</span>
+
+              <!-- Music Links -->
+              <div class="flex items-center gap-3 uppercase tracking-wider text-zinc-400">
+                <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-150 py-1">
+                  SoundCloud ↗
+                </a>
+                <span class="text-zinc-600">•</span>
+                <a href="https://es.ra.co/dj/dantetoto" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-150 py-1">
+                  Resident Advisor ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fila Inferior: Botón Play Neón + Onda Interactiva + Contador -->
+          <div class="flex items-center gap-3 sm:gap-4">
+            <!-- Botón PLAY SET funcional y estético con acento verde neón (#39FF14) -->
+            <button 
+              type="button" 
+              id="mainPlayBtn" 
+              class="shrink-0 bg-[#39FF14] hover:bg-[#32e010] text-black font-mono font-bold text-xs uppercase px-5 py-3 tracking-wider flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(57,255,20,0.35)] transition-all cursor-pointer select-none"
+              aria-label="Reproducir audio"
+            >
+              <svg id="playBtnIcon" class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <polygon points="6 4 20 12 6 20 6 4"></polygon>
+              </svg>
+              <span class="tracking-widest" data-i18n="heroCtaPlay">ESCUCHAR SET</span>
+            </button>
+
+            <!-- Onda interactiva con scrubber -->
+            <div class="grow min-w-0">
+              <div class="waveform-container !h-12 bg-[#08080a]" title="Haz clic para explorar la pista">
+                <canvas id="waveformCanvas"></canvas>
+                <div class="waveform-scrubber" id="waveformScrubber"></div>
+              </div>
+            </div>
+
+            <!-- Contador de tiempo -->
+            <div class="shrink-0 text-right">
+              <span id="trackTimeDisplay" class="text-xs font-mono text-zinc-300 font-medium tracking-wider whitespace-nowrap block">
+                01:36 / 62:00
+              </span>
+              <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-widest hidden sm:block">
+                320 KBPS
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea divisoria técnica interactiva con pulso VU-Meter -->
+    <div class="section-divider-tech"></div>
+
+    <!-- ========================================================= -->
+    <!-- 3. SESIONES EN VIVO // CABINA (4 Videos Verticales 9:16)  -->
+    <!-- ========================================================= -->
+    <section class="py-20 md:py-28 border-b border-white/[0.08] bg-[#050505]" id="live">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div>
+            <span class="text-xs font-mono font-semibold tracking-widest text-zinc-500 uppercase block mb-2" data-i18n="liveSectionTitle">
+              // SESIONES EN VIVO // CABINA
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-i18n="liveHeadline">
+              DIRECTO DESDE LA CABINA
+            </h2>
+          </div>
+          <p class="text-xs font-mono text-zinc-500 uppercase tracking-wider hidden sm:block" data-i18n="liveHint">
+            [ VISTA PREVIA AL PASAR EL CURSOR • CLIC PARA AUDIO ]
+          </p>
+        </div>
+
+        <!-- 4 Columnas Grid en Desktop y Swipe Horizontal en Móvil -->
+        <div class="flex md:grid md:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+          <!-- Video 1: club1.mp4 -->
+          <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="0">
+              <video src="videos/club1.mp4" muted playsinline loop preload="metadata" class="w-full h-full object-cover"></video>
+              <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador de Cabina en Vivo -->
+              <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
+                <div class="flex items-end gap-0.5 h-3.5">
+                  <span class="vu-meter-bar h-1.5"></span>
+                  <span class="vu-meter-bar h-2.5"></span>
+                  <span class="vu-meter-bar h-1"></span>
+                </div>
+                <span class="text-[9px] font-mono tracking-widest text-zinc-300 uppercase">CABINA // EN VIVO</span>
+              </div>
+
+              <!-- Botón de Sonido -->
+              <button type="button" class="sound-toggle-btn absolute bottom-3 right-3 z-20 px-3 py-1.5 bg-black/85 hover:bg-black text-[11px] font-mono tracking-wider text-zinc-200 hover:text-white border border-[#27272a] hover:border-[#39FF14] transition-all rounded-none cursor-pointer flex items-center gap-2 backdrop-blur-sm" aria-label="Activar audio">
+                <span class="sound-status-indicator w-1.5 h-1.5 rounded-full bg-zinc-500 transition-colors"></span>
+                <span class="sound-label">[ AUDIO ]</span>
+              </button>
+            </div>
+            <span class="text-xs font-mono text-zinc-400 tracking-wider uppercase mt-3 block">
+              01 // SESIÓN EN CLUB
+            </span>
+          </div>
+
+          <!-- Video 2: club2.mp4 -->
+          <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="1">
+              <video src="videos/club2.mp4" muted playsinline loop preload="metadata" class="w-full h-full object-cover"></video>
+              <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador de Cabina en Vivo -->
+              <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
+                <div class="flex items-end gap-0.5 h-3.5">
+                  <span class="vu-meter-bar h-1.5"></span>
+                  <span class="vu-meter-bar h-2.5"></span>
+                  <span class="vu-meter-bar h-1"></span>
+                </div>
+                <span class="text-[9px] font-mono tracking-widest text-zinc-300 uppercase">CABINA // EN VIVO</span>
+              </div>
+
+              <button type="button" class="sound-toggle-btn absolute bottom-3 right-3 z-20 px-3 py-1.5 bg-black/85 hover:bg-black text-[11px] font-mono tracking-wider text-zinc-200 hover:text-white border border-[#27272a] hover:border-[#39FF14] transition-all rounded-none cursor-pointer flex items-center gap-2 backdrop-blur-sm" aria-label="Activar audio">
+                <span class="sound-status-indicator w-1.5 h-1.5 rounded-full bg-zinc-500 transition-colors"></span>
+                <span class="sound-label">[ AUDIO ]</span>
+              </button>
+            </div>
+            <span class="text-xs font-mono text-zinc-400 tracking-wider uppercase mt-3 block">
+              02 // GROOVE NOCTURNO
+            </span>
+          </div>
+
+          <!-- Video 3: video cabina 1.mp4 -->
+          <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="2">
+              <video src="videos/video cabina 1.mp4" muted playsinline loop preload="metadata" class="w-full h-full object-cover"></video>
+              <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador de Cabina en Vivo -->
+              <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
+                <div class="flex items-end gap-0.5 h-3.5">
+                  <span class="vu-meter-bar h-1.5"></span>
+                  <span class="vu-meter-bar h-2.5"></span>
+                  <span class="vu-meter-bar h-1"></span>
+                </div>
+                <span class="text-[9px] font-mono tracking-widest text-zinc-300 uppercase">CABINA // EN VIVO</span>
+              </div>
+
+              <button type="button" class="sound-toggle-btn absolute bottom-3 right-3 z-20 px-3 py-1.5 bg-black/85 hover:bg-black text-[11px] font-mono tracking-wider text-zinc-200 hover:text-white border border-[#27272a] hover:border-[#39FF14] transition-all rounded-none cursor-pointer flex items-center gap-2 backdrop-blur-sm" aria-label="Activar audio">
+                <span class="sound-status-indicator w-1.5 h-1.5 rounded-full bg-zinc-500 transition-colors"></span>
+                <span class="sound-label">[ AUDIO ]</span>
+              </button>
+            </div>
+            <span class="text-xs font-mono text-zinc-400 tracking-wider uppercase mt-3 block">
+              03 // SET DE VINILO Y CDJ
+            </span>
+          </div>
+
+          <!-- Video 4: video cabina 2.mp4 -->
+          <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="3">
+              <video src="videos/video cabina 2.mp4" muted playsinline loop preload="metadata" class="w-full h-full object-cover"></video>
+              <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador de Cabina en Vivo -->
+              <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
+                <div class="flex items-end gap-0.5 h-3.5">
+                  <span class="vu-meter-bar h-1.5"></span>
+                  <span class="vu-meter-bar h-2.5"></span>
+                  <span class="vu-meter-bar h-1"></span>
+                </div>
+                <span class="text-[9px] font-mono tracking-widest text-zinc-300 uppercase">CABINA // EN VIVO</span>
+              </div>
+
+              <button type="button" class="sound-toggle-btn absolute bottom-3 right-3 z-20 px-3 py-1.5 bg-black/85 hover:bg-black text-[11px] font-mono tracking-wider text-zinc-200 hover:text-white border border-[#27272a] hover:border-[#39FF14] transition-all rounded-none cursor-pointer flex items-center gap-2 backdrop-blur-sm" aria-label="Activar audio">
+                <span class="sound-status-indicator w-1.5 h-1.5 rounded-full bg-zinc-500 transition-colors"></span>
+                <span class="sound-label">[ AUDIO ]</span>
+              </button>
+            </div>
+            <span class="text-xs font-mono text-zinc-400 tracking-wider uppercase mt-3 block">
+              04 // CONTROL DE DECKS
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea divisoria técnica interactiva con pulso VU-Meter -->
+    <div class="section-divider-tech"></div>
+
+    <!-- ========================================================= -->
+    <!-- 3. GIGS & TOUR DATES // RESIDENT ADVISOR                  -->
+    <!-- ========================================================= -->
+    <section class="py-20 md:py-28 border-b border-white/[0.08] bg-[#050505] relative bg-tech-grid" id="gigs">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Contenedor Principal (Estilo Panel de Club Industrial con Glassmorphism) -->
+        <div class="glass-panel bg-[#0A0A0C]/60 backdrop-blur-md border border-white/10 p-6 md:p-10 max-w-6xl mx-auto rounded-none relative spotlight-card">
+          <!-- Acento decorativo verde neón (#39FF14) en la esquina superior izquierda -->
+          <div class="absolute top-0 left-0 w-16 sm:w-24 h-0.5 bg-[#39FF14] shadow-[0_0_10px_#39FF14]"></div>
+          <div class="absolute top-0 left-0 w-0.5 h-6 sm:h-8 bg-[#39FF14] shadow-[0_0_10px_#39FF14]"></div>
+
+          <!-- Encabezado del Panel -->
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+            <div>
+              <span class="text-xs font-mono font-semibold tracking-widest text-[#39FF14] uppercase block mb-2" data-i18n="gigsSectionTag">
+                FECHAS // BARCELONA
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight" data-i18n="gigsSectionTitle">
+                FECHAS SELECCIONADAS Y PRÓXIMAS
+              </h2>
+            </div>
+            <a href="https://es.ra.co/dj/dantetoto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-white/20 hover:border-[#39FF14] px-4 py-2 text-xs font-mono uppercase tracking-wider text-zinc-300 hover:text-white hover:bg-white/[0.03] transition-all self-start sm:self-auto group" data-i18n="gigsViewRaBtn">
+              <span>VER PERFIL OFICIAL EN RA</span>
+              <span class="text-[#39FF14] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+            </a>
+          </div>
+
+          <!-- BLOQUE 1: UPCOMING (Tarjeta destacada Glassmorphic de alto impacto con Flyer) -->
+          <div class="mb-10">
+            <div class="mb-3 flex items-center justify-between text-xs font-mono tracking-widest text-zinc-400 uppercase">
+              <span data-i18n="gigsUpcomingTitle">// PRÓXIMAS FECHAS</span>
+              <span class="text-[11px] text-[#39FF14] font-mono hidden sm:inline flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 bg-[#39FF14] rounded-full animate-pulse"></span>
+                FECHA CONFIRMADA
+              </span>
+            </div>
+
+            <!-- Tarjeta Next Gig Destacada Glassmorphic -->
+            <div class="glass-card-featured p-5 sm:p-7 bg-white/[0.03] backdrop-blur-lg border border-white/15 border-l-4 border-l-[#39FF14] flex flex-col lg:flex-row lg:items-center justify-between gap-6 group hover:border-white/25 hover:border-l-[#39FF14] transition-all spotlight-card relative overflow-hidden">
+              
+              <!-- Contenido Izquierdo: Flyer + Metadatos -->
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 grow min-w-0">
+                <!-- Flyer Thumbnail con Zoom al Hover -->
+                <div class="relative w-24 h-32 sm:w-28 sm:h-36 shrink-0 bg-black/60 border border-white/15 overflow-hidden group/flyer shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+                  <img src="fotos/flyers/PRISMATICA.webp" alt="Prismatica Halloween Edition" class="w-full h-full object-cover object-center group-hover/flyer:scale-105 group-hover:scale-105 transition-transform duration-500" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
+                  <span class="absolute top-1 left-1 px-1.5 py-0.5 bg-black/85 font-mono text-[8px] text-[#39FF14] border border-[#39FF14]/40">FLYER</span>
+                </div>
+
+                <!-- Textos y Coordenadas del Evento -->
+                <div class="grow min-w-0">
+                  <div class="flex flex-wrap items-center gap-2.5 mb-2">
+                    <span class="inline-flex items-center gap-1.5 text-[10px] font-mono tracking-widest text-[#39FF14] uppercase bg-black/80 border border-[#39FF14]/50 px-2.5 py-1 whitespace-nowrap shadow-[0_0_8px_rgba(57,255,20,0.25)]">
+                      <span class="w-1.5 h-1.5 bg-[#39FF14] rounded-full shadow-[0_0_6px_#39FF14] shrink-0 animate-pulse"></span>
+                      <span data-i18n="gigsNextBadge" class="font-bold">PRÓXIMA FECHA</span>
+                    </span>
+                    <span class="text-sm sm:text-base font-mono font-bold tracking-wider text-white">
+                      SÁB 31 OCT 2026
+                    </span>
+                  </div>
+
+                  <h3 class="text-base sm:text-xl font-bold text-white tracking-tight group-hover:text-[#39FF14] transition-colors">
+                    Prismatica Halloween Edition: Indie Dance & Melodic Techno
+                  </h3>
+                  <p class="text-xs font-mono text-zinc-300 mt-1.5 flex items-center gap-2">
+                    <span class="text-zinc-200 font-semibold">Puerto Bahia Club de Mar</span>
+                    <span class="text-zinc-500">—</span>
+                    <span class="text-zinc-400">BCN // Barcelona, ES</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Action Link -->
+              <div class="shrink-0 self-start lg:self-center w-full lg:w-auto pt-3 lg:pt-0 border-t lg:border-t-0 border-white/10">
+                <a href="https://es.ra.co/events/2564501" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full lg:w-auto bg-white hover:bg-[#39FF14] hover:text-black text-black font-mono font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-none transition-all shadow-[0_4px_20px_rgba(0,0,0,0.6)] group/btn">
+                  <span>EVENTO EN RA</span>
+                  <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOQUE 2: SELECTED PAST GIGS (Cards Glassmorphic individuales con Flyers de archivo) -->
+          <div>
+            <div class="mb-4 flex items-center justify-between text-xs font-mono tracking-widest text-zinc-400 uppercase">
+              <span data-i18n="gigsPastTitle">// ARCHIVO RECIENTE</span>
+              <span class="text-[11px] text-zinc-500 font-mono hidden sm:inline">ARCHIVO OFICIAL // BCN</span>
+            </div>
+
+            <!-- Grilla de Cards Glassmorphic para cada fecha pasada con su Flyer -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+              
+              <!-- Past Gig Card 1: PANDHORA -->
+              <div class="glass-card bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 spotlight-card rounded-none group flex flex-col justify-between overflow-hidden">
+                <div class="relative w-full aspect-[4/3] bg-black/60 overflow-hidden border-b border-white/10">
+                  <img src="fotos/flyers/PANDHORA.webp" alt="PANDHORA pres. MATI ASTROZA" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-100" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                  
+                  <div class="absolute top-2.5 left-2.5 px-2.5 py-1 bg-black/80 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-zinc-300">
+                    22 AGO 2026
+                  </div>
+                  <div class="absolute bottom-2 right-2 text-[9px] font-mono text-zinc-400 px-1.5 py-0.5 bg-black/75 border border-white/10">
+                    BARCELONA
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between grow">
+                  <div>
+                    <h3 class="text-sm sm:text-base font-bold text-white tracking-tight group-hover:text-[#39FF14] transition-colors mb-1.5">
+                      PANDHORA pres. MATI ASTROZA
+                    </h3>
+                    <p class="text-xs font-mono text-zinc-400 flex items-center gap-1.5 mb-4">
+                      <span>Ferlandina 29</span>
+                      <span class="text-zinc-600">—</span>
+                      <span>Barcelona, ES</span>
+                    </p>
+                  </div>
+
+                  <div class="pt-3 border-t border-white/10 mt-auto flex items-center justify-between">
+                    <span class="text-[10px] font-mono text-zinc-500 uppercase">ARCHIVADO</span>
+                    <a href="https://es.ra.co/events/2510803" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-300 hover:text-[#39FF14] uppercase tracking-wider group/link py-1">
+                      <span>VER EN RA</span>
+                      <span class="text-[#39FF14] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Past Gig Card 2: OFF WEEK AT GENERATOR -->
+              <div class="glass-card bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 spotlight-card rounded-none group flex flex-col justify-between overflow-hidden">
+                <div class="relative w-full aspect-[4/3] bg-black/60 overflow-hidden border-b border-white/10">
+                  <img src="fotos/flyers/OFF WEEK AT GENERATOR.webp" alt="OFF WEEK AT GENERATOR" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-100" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                  
+                  <div class="absolute top-2.5 left-2.5 px-2.5 py-1 bg-black/80 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-zinc-300">
+                    19 JUN 2026
+                  </div>
+                  <div class="absolute bottom-2 right-2 text-[9px] font-mono text-zinc-400 px-1.5 py-0.5 bg-black/75 border border-white/10">
+                    OFF WEEK BCN
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between grow">
+                  <div>
+                    <h3 class="text-sm sm:text-base font-bold text-white tracking-tight group-hover:text-[#39FF14] transition-colors mb-1.5">
+                      OFF WEEK AT GENERATOR
+                    </h3>
+                    <p class="text-xs font-mono text-zinc-400 flex items-center gap-1.5 mb-4">
+                      <span>Generator</span>
+                      <span class="text-zinc-600">—</span>
+                      <span>Barcelona, ES</span>
+                    </p>
+                  </div>
+
+                  <div class="pt-3 border-t border-white/10 mt-auto flex items-center justify-between">
+                    <span class="text-[10px] font-mono text-zinc-500 uppercase">ARCHIVADO</span>
+                    <a href="https://es.ra.co/events/2465183" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-300 hover:text-[#39FF14] uppercase tracking-wider group/link py-1">
+                      <span>VER EN RA</span>
+                      <span class="text-[#39FF14] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Past Gig Card 3: PLACEO -->
+              <div class="glass-card bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 spotlight-card rounded-none group flex flex-col justify-between overflow-hidden">
+                <div class="relative w-full aspect-[4/3] bg-black/60 overflow-hidden border-b border-white/10">
+                  <img src="fotos/flyers/PLACEO.webp" alt="Placeo Pres. Bridge48 - Sesión de Tarde" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-90 group-hover:brightness-100" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                  
+                  <div class="absolute top-2.5 left-2.5 px-2.5 py-1 bg-black/80 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider text-zinc-300">
+                    18 ABR 2026
+                  </div>
+                  <div class="absolute bottom-2 right-2 text-[9px] font-mono text-zinc-400 px-1.5 py-0.5 bg-black/75 border border-white/10">
+                    BARCELONA
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between grow">
+                  <div>
+                    <h3 class="text-sm sm:text-base font-bold text-white tracking-tight group-hover:text-[#39FF14] transition-colors mb-1.5">
+                      Placeo Pres. Bridge48 - Sesión de Tarde
+                    </h3>
+                    <p class="text-xs font-mono text-zinc-400 flex items-center gap-1.5 mb-4">
+                      <span>Bridge 48</span>
+                      <span class="text-zinc-600">—</span>
+                      <span>Barcelona, ES</span>
+                    </p>
+                  </div>
+
+                  <div class="pt-3 border-t border-white/10 mt-auto flex items-center justify-between">
+                    <span class="text-[10px] font-mono text-zinc-500 uppercase">ARCHIVADO</span>
+                    <a href="https://es.ra.co/events/2408251" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-300 hover:text-[#39FF14] uppercase tracking-wider group/link py-1">
+                      <span>VER EN RA</span>
+                      <span class="text-[#39FF14] group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea divisoria técnica interactiva con pulso VU-Meter -->
+    <div class="section-divider-tech"></div>
+
+    <!-- ========================================================= -->
+    <!-- 4. SECCIÓN DE BIOGRAFÍA (// BIO - Cruda & Directa)        -->
+    <!-- ========================================================= -->
+    <section class="py-20 md:py-28 border-b border-white/[0.08] bg-[#050505]" id="bio">
+      <div class="max-w-6xl mx-auto px-6">
+        <!-- Section Label -->
+        <span class="text-xs font-mono font-semibold tracking-widest text-zinc-500 uppercase block mb-10" data-i18n="bioSectionTitle">
+          // BIOGRAFÍA
+        </span>
+
+        <!-- Estructura Cruda y Directa de Club: 2 Columnas sin marcos pesados -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-14 items-center">
+          <!-- Columna Izquierda: Foto vertical en blanco y negro fusionada con el fondo -->
+          <div class="md:col-span-5 flex flex-col justify-center">
+            <div class="relative w-full aspect-[4/5] overflow-hidden bg-[#0a0a0c] border border-white/[0.08] shadow-[0_12px_36px_rgba(0,0,0,0.85)] group spotlight-card">
+              <img 
+                src="fotos/foto dante.jpg" 
+                alt="Dante Toto" 
+                class="w-full h-full object-cover object-center grayscale contrast-125 brightness-95 hover:grayscale-0 transition-all duration-700 block"
+              />
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Texto contundente, sonido y coordenadas técnicas -->
+          <div class="md:col-span-7 flex flex-col justify-center">
+            <span class="text-[10px] font-mono text-[#39FF14] tracking-widest uppercase mb-3 block" data-i18n="bioSoundProfile">
+              // PERFIL DE SONIDO Y TRAYECTORIA
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-5">
+              DANTE TOTO
+            </h3>
+            
+            <p class="text-base sm:text-lg text-zinc-300 leading-relaxed font-sans mb-5" data-i18n="bioShortP1">
+              Dante Toto (@dantetoto_) es un DJ y artista electrónico argentino establecido en Barcelona. Su sonido fusiona el pulso hipnótico del Indie Dance con las frecuencias graves del Dark Tech House y la contundencia del Techno, con presentaciones regulares en espacios clave de la escena underground barcelonesa como Detroit Club y Bridge 48 (Étnica).
+            </p>
+
+            <p class="text-sm text-zinc-400 font-mono leading-relaxed mb-8" data-i18n="bioNarrative">
+              Sonido orientado a la narrativa de pista: tensión progresiva continua, frecuencias analógicas crudas y una lectura quirúrgica de la cabina concebida para extender la energía de la noche.
+            </p>
+
+            <!-- Coordenadas Técnicas de Club en línea inferior limpia -->
+            <div class="pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 gap-5 text-xs font-mono uppercase tracking-wider">
+              <div>
+                <span class="text-zinc-500 block text-[10px] tracking-widest mb-1" data-i18n="bioResidencesLabel">// RESIDENCIAS Y CLUBES BCN</span>
+                <span class="text-white font-medium">Detroit Club • Bridge 48 • Ferlandina 29</span>
+              </div>
+              <div>
+                <span class="text-zinc-500 block text-[10px] tracking-widest mb-1" data-i18n="bioSpectrumLabel">// ESPECTRO SONORO</span>
+                <span class="text-white font-medium">Indie Dance • Dark Tech House • Techno</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Línea divisoria técnica interactiva con pulso VU-Meter -->
+    <div class="section-divider-tech"></div>
+
+    <!-- ========================================================= -->
+    <!-- 4. GALERÍA DE PRENSA (FOTOS OFICIALES - 4 Fotos Reales)   -->
+    <!-- ========================================================= -->
+    <section class="py-20 md:py-28 border-b border-white/[0.08] bg-[#050505]" id="shoots">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+          <div>
+            <span class="text-xs font-mono font-semibold tracking-widest text-zinc-500 uppercase block mb-2" data-i18n="shootsSectionTitle">
+              FOTOS DE PRENSA
+            </span>
+            <p class="text-sm text-zinc-400" data-i18n="shootsSubtitle">
+              Material fotográfico oficial en alta resolución para flyers, cartelería y prensa de clubes.
+            </p>
+          </div>
+
+          <a href="./downloads/Dante_Toto_Press_Photos_300DPI.zip" download="Dante_Toto_Press_Photos_300DPI.zip" class="trigger-dl inline-flex items-center gap-2 text-xs font-mono font-semibold text-[#39FF14] hover:underline tracking-wider" data-filename="Dante_Toto_Press_Photos_300DPI.zip" data-i18n="shootsDownloadAll">
+            DESCARGAR TODAS EN ALTA RESOLUCIÓN (ZIP) →
+          </a>
+        </div>
+
+        <!-- Clean Strip of 4 Real Photos with B&W to Color Hover Effect & Viewfinder Reticle -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Photo 1: dante cabina 2.jpeg -->
+          <div class="bg-[#0c0c0c] border border-white/[0.08] overflow-hidden rounded-none group hover:border-zinc-400 transition-colors flex flex-col spotlight-card">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#121212]">
+              <!-- Viewfinder Focus Reticle Corners -->
+              <span class="viewfinder-corner viewfinder-tl"></span>
+              <span class="viewfinder-corner viewfinder-tr"></span>
+              <span class="viewfinder-corner viewfinder-bl"></span>
+              <span class="viewfinder-corner viewfinder-br"></span>
+              <img src="fotos/dante cabina 2.jpeg" alt="Dante Toto en cabina" class="w-full h-full object-cover object-center grayscale contrast-120 hover:grayscale-0 group-hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="p-3.5 flex items-center justify-between border-t border-white/[0.08] bg-[#0c0c0c] mt-auto">
+              <div>
+                <span class="text-[11px] font-mono text-zinc-300 block">CABINA 02 // BCN</span>
+                <span class="text-[9px] font-mono text-zinc-500 block">300 DPI • RAW EXPORT</span>
+              </div>
+              <a href="fotos/dante cabina 2.jpeg" download="Dante_Toto_Cabina_02.jpeg" class="trigger-dl text-[11px] font-mono text-white hover:text-[#39FF14] transition-colors py-1 px-1.5" data-filename="Dante_Toto_Cabina_02.jpeg">
+                [ JPG ]
+              </a>
+            </div>
+          </div>
+
+          <!-- Photo 2: dante club.jpeg -->
+          <div class="bg-[#0c0c0c] border border-white/[0.08] overflow-hidden rounded-none group hover:border-zinc-400 transition-colors flex flex-col spotlight-card">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#121212]">
+              <span class="viewfinder-corner viewfinder-tl"></span>
+              <span class="viewfinder-corner viewfinder-tr"></span>
+              <span class="viewfinder-corner viewfinder-bl"></span>
+              <span class="viewfinder-corner viewfinder-br"></span>
+              <img src="fotos/dante club.jpeg" alt="Dante Toto Club en vivo" class="w-full h-full object-cover object-center grayscale contrast-120 hover:grayscale-0 group-hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="p-3.5 flex items-center justify-between border-t border-white/[0.08] bg-[#0c0c0c] mt-auto">
+              <div>
+                <span class="text-[11px] font-mono text-zinc-300 block">CLUB EN VIVO // DETROIT</span>
+                <span class="text-[9px] font-mono text-zinc-500 block">300 DPI • RAW EXPORT</span>
+              </div>
+              <a href="fotos/dante club.jpeg" download="Dante_Toto_Club_Live.jpeg" class="trigger-dl text-[11px] font-mono text-white hover:text-[#39FF14] transition-colors py-1 px-1.5" data-filename="Dante_Toto_Club_Live.jpeg">
+                [ JPG ]
+              </a>
+            </div>
+          </div>
+
+          <!-- Photo 3: foto dante.jpg -->
+          <div class="bg-[#0c0c0c] border border-white/[0.08] overflow-hidden rounded-none group hover:border-zinc-400 transition-colors flex flex-col spotlight-card">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#121212]">
+              <span class="viewfinder-corner viewfinder-tl"></span>
+              <span class="viewfinder-corner viewfinder-tr"></span>
+              <span class="viewfinder-corner viewfinder-bl"></span>
+              <span class="viewfinder-corner viewfinder-br"></span>
+              <img src="fotos/foto dante.jpg" alt="Dante Toto Retrato" class="w-full h-full object-cover object-center grayscale contrast-120 hover:grayscale-0 group-hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="p-3.5 flex items-center justify-between border-t border-white/[0.08] bg-[#0c0c0c] mt-auto">
+              <div>
+                <span class="text-[11px] font-mono text-zinc-300 block">RETRATO // HQ</span>
+                <span class="text-[9px] font-mono text-zinc-500 block">300 DPI • RAW EXPORT</span>
+              </div>
+              <a href="fotos/foto dante.jpg" download="Dante_Toto_Portrait_HQ.jpg" class="trigger-dl text-[11px] font-mono text-white hover:text-[#39FF14] transition-colors py-1 px-1.5" data-filename="Dante_Toto_Portrait_HQ.jpg">
+                [ JPG ]
+              </a>
+            </div>
+          </div>
+
+          <!-- Photo 4: dante cabina.jpeg -->
+          <div class="bg-[#0c0c0c] border border-white/[0.08] overflow-hidden rounded-none group hover:border-zinc-400 transition-colors flex flex-col spotlight-card">
+            <div class="relative w-full aspect-[3/4] overflow-hidden bg-[#121212]">
+              <span class="viewfinder-corner viewfinder-tl"></span>
+              <span class="viewfinder-corner viewfinder-tr"></span>
+              <span class="viewfinder-corner viewfinder-bl"></span>
+              <span class="viewfinder-corner viewfinder-br"></span>
+              <img src="fotos/dante cabina.jpeg" alt="Dante Toto Sesión de Cabina" class="w-full h-full object-cover object-center grayscale contrast-120 hover:grayscale-0 group-hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="p-3.5 flex items-center justify-between border-t border-white/[0.08] bg-[#0c0c0c] mt-auto">
+              <div>
+                <span class="text-[11px] font-mono text-zinc-300 block">CABINA // VINILO Y CDJ</span>
+                <span class="text-[9px] font-mono text-zinc-500 block">300 DPI • RAW EXPORT</span>
+              </div>
+              <a href="fotos/dante cabina.jpeg" download="Dante_Toto_Booth_Vinyl.jpeg" class="trigger-dl text-[11px] font-mono text-white hover:text-[#39FF14] transition-colors py-1 px-1.5" data-filename="Dante_Toto_Booth_Vinyl.jpeg">
+                [ JPG ]
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea divisoria técnica interactiva con pulso VU-Meter -->
+    <div class="section-divider-tech"></div>
+
+    <!-- ========================================================= -->
+    <!-- 6. TARJETAS DE DESCARGA (KIT DE PRENSA)                    -->
+    <!-- ========================================================= -->
+    <section class="py-20 md:py-28 border-b border-white/[0.08] bg-[#050505] relative bg-tech-grid" id="presskit">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Contenedor Principal (Estilo Panel Glassmorphic Unificado con Gigs) -->
+        <div class="glass-panel bg-[#0A0A0C]/60 backdrop-blur-md border border-white/10 p-6 md:p-10 max-w-6xl mx-auto rounded-none relative spotlight-card">
+          <!-- Acento decorativo verde neón (#39FF14) en la esquina superior izquierda -->
+          <div class="absolute top-0 left-0 w-16 sm:w-24 h-0.5 bg-[#39FF14] shadow-[0_0_10px_#39FF14]"></div>
+          <div class="absolute top-0 left-0 w-0.5 h-6 sm:h-8 bg-[#39FF14] shadow-[0_0_10px_#39FF14]"></div>
+
+          <!-- Encabezado del Kit de Prensa -->
+          <div class="text-center max-w-3xl mx-auto mb-10 pb-6 border-b border-white/10">
+            <span class="text-xs font-mono font-semibold tracking-widest text-[#39FF14] uppercase block mb-2" data-i18n="pressSectionTitle">
+              KIT DE PRENSA
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3" data-i18n="pressHeadline">
+              MATERIAL DESCARGABLE PARA PROMOTORES
+            </h2>
+            <p class="text-xs sm:text-sm text-zinc-400 font-mono" data-i18n="pressSubtitle">
+              Acceso inmediato a los documentos técnicos y promocionales de Dante Toto para promotores y bookers.
+            </p>
+          </div>
+
+          <!-- Tarjetas de Descarga Glassmorphic (Lenguaje visual unificado) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+            <!-- Card 1: EPK Dossier -->
+            <a href="./downloads/Dante_Toto_EPK_Dossier_2026.pdf" download="Dante_Toto_EPK_Dossier_2026.pdf" class="glass-card presskit-card trigger-dl flex flex-col items-start justify-between p-6 group rounded-none bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 relative text-left spotlight-card" data-filename="Dante_Toto_EPK_Dossier_2026.pdf">
+              <!-- Acento de esquina superior derecha -->
+              <span class="absolute top-0 right-0 w-6 h-0.5 bg-[#39FF14]/30 group-hover:bg-[#39FF14] transition-colors"></span>
+              <span class="text-[10px] font-mono text-[#39FF14] tracking-widest uppercase mb-4 block">[ .PDF ]</span>
+              <span class="text-xs font-mono font-bold tracking-wider text-white group-hover:text-[#39FF14] uppercase transition-colors" data-i18n="btnEpkDossier">
+                DESCARGAR DOSSIER / EPK (PDF)
+              </span>
+              <div class="mt-6 flex items-center justify-between w-full pt-3 border-t border-white/10 text-[10px] font-mono text-zinc-500">
+                <span>EPK OFICIAL 2026</span>
+                <span class="text-[#39FF14] group-hover:translate-x-1 group-hover:translate-y-0.5 transition-transform font-bold">↓</span>
+              </div>
+            </a>
+
+            <!-- Card 2: Technical Rider -->
+            <a href="./downloads/Dante_Toto_Technical_Rider_2026.pdf" download="Dante_Toto_Technical_Rider_2026.pdf" class="glass-card presskit-card trigger-dl flex flex-col items-start justify-between p-6 group rounded-none bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 relative text-left spotlight-card" data-filename="Dante_Toto_Technical_Rider_2026.pdf">
+              <span class="absolute top-0 right-0 w-6 h-0.5 bg-[#39FF14]/30 group-hover:bg-[#39FF14] transition-colors"></span>
+              <span class="text-[10px] font-mono text-[#39FF14] tracking-widest uppercase mb-4 block">[ SPECS_TÉCNICAS ]</span>
+              <span class="text-xs font-mono font-bold tracking-wider text-white group-hover:text-[#39FF14] uppercase transition-colors" data-i18n="btnTechRider">
+                RIDER TÉCNICO
+              </span>
+              <div class="mt-6 flex items-center justify-between w-full pt-3 border-t border-white/10 text-[10px] font-mono text-zinc-500">
+                <span>SPECS DE CABINA & ESCENARIO</span>
+                <span class="text-[#39FF14] group-hover:translate-x-1 group-hover:translate-y-0.5 transition-transform font-bold">↓</span>
+              </div>
+            </a>
+
+            <!-- Card 3: Press Photos HQ -->
+            <a href="./downloads/Dante_Toto_Press_Photos_HQ.zip" download="Dante_Toto_Press_Photos_HQ.zip" class="glass-card presskit-card trigger-dl flex flex-col items-start justify-between p-6 group rounded-none bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 relative text-left spotlight-card" data-filename="Dante_Toto_Press_Photos_HQ.zip">
+              <span class="absolute top-0 right-0 w-6 h-0.5 bg-[#39FF14]/30 group-hover:bg-[#39FF14] transition-colors"></span>
+              <span class="text-[10px] font-mono text-[#39FF14] tracking-widest uppercase mb-4 block">[ 300DPI_ZIP ]</span>
+              <span class="text-xs font-mono font-bold tracking-wider text-white group-hover:text-[#39FF14] uppercase transition-colors" data-i18n="btnPressPhotos">
+                FOTOS DE PRENSA HQ
+              </span>
+              <div class="mt-6 flex items-center justify-between w-full pt-3 border-t border-white/10 text-[10px] font-mono text-zinc-500">
+                <span>RAW EXPORTS • 300 DPI</span>
+                <span class="text-[#39FF14] group-hover:translate-x-1 group-hover:translate-y-0.5 transition-transform font-bold">↓</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- ========================================================= -->
+          <!-- MÓDULOS PROFESIONALES: RIDER TÉCNICO & HOSPITALITY VISUAL -->
+          <!-- ========================================================= -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10 text-left">
+            
+            <!-- TARJETA 1: SETUP TÉCNICO EN CABINA -->
+            <div class="glass-card bg-white/[0.03] backdrop-blur-md border border-white/10 p-6 sm:p-7 relative group hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 spotlight-card flex flex-col justify-between">
+              <div class="absolute top-0 left-0 w-8 h-0.5 bg-[#39FF14] shadow-[0_0_8px_#39FF14]"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                  <span class="text-[10px] font-mono tracking-widest text-[#39FF14] uppercase flex items-center gap-2" data-i18n="techRiderBoxTag">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#39FF14] animate-pulse"></span>
+                    RIDER TÉCNICO // CABINA
+                  </span>
+                  <span class="text-[10px] font-mono text-zinc-500 uppercase">SPECS_2026</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-4" data-i18n="techRiderBoxTitle">
+                  SETUP DE REPRODUCCIÓN &amp; MEZCLA
+                </h3>
+                
+                <ul class="space-y-3 font-mono text-xs text-zinc-300">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">3x Pioneer CDJ-3000</strong>
+                      <span class="text-zinc-500 text-[11px]">Enlazados vía Pro DJ Link (Gigabit Ethernet Hub) + firmware actualizado.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">1x Pioneer DJM-V10 o Allen &amp; Heath Xone:96</strong>
+                      <span class="text-zinc-500 text-[11px]">Mixer profesional de 4 a 6 canales, faders y ecualizadores calibrados.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">Monitoreo Booth Estéreo (L + R)</strong>
+                      <span class="text-zinc-500 text-[11px]">2 monitores activos de alta fidelidad a nivel de oído con control de volumen independiente en mixer.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">Estructura Antivibración &amp; Alimentación</strong>
+                      <span class="text-zinc-500 text-[11px]">Cabina desacoplada de subwoofers + tomas de corriente 220V Schuko directas.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-zinc-500">
+                <span>CONFIGURACIÓN ESTÁNDAR CLUB</span>
+                <span class="text-[#39FF14]">3 DECK SETUP</span>
+              </div>
+            </div>
+
+            <!-- TARJETA 2: HOSPITALITY & LOGÍSTICA -->
+            <div class="glass-card bg-white/[0.03] backdrop-blur-md border border-white/10 p-6 sm:p-7 relative group hover:border-[#39FF14]/50 hover:bg-white/[0.05] transition-all duration-300 spotlight-card flex flex-col justify-between">
+              <div class="absolute top-0 right-0 w-8 h-0.5 bg-[#39FF14] shadow-[0_0_8px_#39FF14]"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                  <span class="text-[10px] font-mono tracking-widest text-[#39FF14] uppercase flex items-center gap-2" data-i18n="hospitalityBoxTag">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#39FF14]"></span>
+                    HOSPITALITY // CABINA &amp; CAMERINO
+                  </span>
+                  <span class="text-[10px] font-mono text-zinc-500 uppercase">LOGÍSTICA</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-4" data-i18n="hospitalityBoxTitle">
+                  REQUERIMIENTOS DE HOSPITALITY
+                </h3>
+
+                <ul class="space-y-3 font-mono text-xs text-zinc-300">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">Agua Mineral Sin Gas (6 unidades)</strong>
+                      <span class="text-zinc-500 text-[11px]">3 botellas frías + 3 a temperatura ambiente disponibles directamente en cabina.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">Cerveza Premium</strong>
+                      <span class="text-zinc-500 text-[11px]">Pack de cervezas frías (Estrella Damm / Heineken / Corona) disponibles en cabina o camerino.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">Gaseosas &amp; Bebidas Refrescantes</strong>
+                      <span class="text-zinc-500 text-[11px]">Coca-Cola, Sprite o tónica + Red Bull disponibles con hielo y vasos limpios.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-[#39FF14] mt-0.5 font-bold">›</span>
+                    <div>
+                      <strong class="text-white block font-semibold">Toallas Negras de Cabina</strong>
+                      <span class="text-zinc-500 text-[11px]">2 toallas de mano limpias ubicadas en la cabina antes del inicio de la sesión.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[10px] font-mono text-zinc-500">
+                <span>HOSPITALITY RIDER BÁSICO</span>
+                <span class="text-[#39FF14]">ESTÁNDAR PRO</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bloque Inferior: Barra de Comandos Estilo Terminal Analógica -->
+          <button type="button" id="copyRiderBtn" class="bg-black/60 backdrop-blur-md border border-white/20 p-4 flex items-center justify-between w-full max-w-xl mx-auto font-mono text-xs text-zinc-400 hover:border-[#39FF14] hover:text-white transition-colors cursor-pointer select-none group rounded-none">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-[#39FF14] shadow-[0_0_8px_#39FF14] animate-pulse"></span>
+              <span class="text-[11px] text-zinc-300 tracking-wider" data-i18n="riderReadyToCopy">● LISTO PARA COPIAR</span>
+            </div>
+            <div class="flex items-center gap-2 text-zinc-300 group-hover:text-[#39FF14] transition-colors">
+              <span id="copyRiderIcon">📋</span>
+              <span id="copyRiderText" class="font-bold tracking-wider" data-i18n="riderCopyBtn">[ COPIAR SPECS AL PORTAPAPELES ]</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Línea divisoria técnica interactiva con pulso VU-Meter -->
+    <div class="section-divider-tech"></div>
+
+    <!-- ========================================================= -->
+    <!-- 7. CONTACTO DIRECTO                                       -->
+    <!-- ========================================================= -->
+    <section class="py-20 md:py-28 bg-[#050505]" id="contact">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <!-- Section Tag & Title -->
+        <span class="text-xs font-mono font-semibold tracking-widest text-zinc-500 uppercase block mb-3" data-i18n="contactSectionTitle">
+          CONTRATACIONES Y CONTACTO DIRECTO
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-4" data-i18n="contactHeadline">
+          CONTACTO DANTE TOTO
+        </h2>
+        <p class="text-sm sm:text-base text-zinc-400 max-w-xl mx-auto leading-relaxed mb-10 font-mono" data-i18n="contactSubtitle">
+          Para fechas en clubes, festivales y contrataciones en Europa y giras internacionales.
+        </p>
+
+        <!-- Contenedor Central de Email (Estilo Tarjeta Industrial) -->
+        <div class="bg-[#0A0A0C] border border-white/10 p-8 md:p-12 max-w-xl mx-auto rounded-none relative group hover:border-[#39FF14]/50 transition-all duration-500 mb-8 text-center spotlight-card">
+          <!-- Acento decorativo sutil en esquina -->
+          <div class="absolute top-0 right-0 w-8 h-0.5 bg-[#39FF14]/40 group-hover:bg-[#39FF14] transition-colors"></div>
+          
+          <span class="font-mono text-[10px] text-zinc-500 tracking-widest uppercase mb-4 block" data-i18n="contactDirectEmailLabel">
+            [ CONTRATACIÓN DIRECTA ]
+          </span>
+
+          <a href="mailto:bookings@dantetoto.com" class="text-2xl sm:text-3xl font-mono font-bold text-white hover:text-[#39FF14] transition-colors select-all block my-6 break-all tracking-tight">
+            bookings@dantetoto.com
+          </a>
+
+          <!-- Botón de copiar interactivo de alta precisión -->
+          <button type="button" id="copyEmailBtn" class="bg-transparent border border-white/20 text-white font-mono text-xs px-6 py-3 hover:bg-[#39FF14] hover:text-black hover:border-[#39FF14] transition-all duration-300 cursor-pointer rounded-none inline-flex items-center justify-center gap-2 select-none">
+            <span id="copyEmailIcon" class="text-xs">📋</span>
+            <span id="copyEmailBtnText" data-i18n="contactCopyEmailBtn">[ COPIAR EMAIL ]</span>
+          </button>
+        </div>
+
+        <!-- Accesos Directos Inferiores (Pills Industriales Simétricas) -->
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-mono uppercase tracking-wider">
+          <a href="https://www.instagram.com/dantetoto_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 border border-white/10 hover:border-[#39FF14]/50 bg-[#0A0A0C] hover:bg-white/[0.03] text-zinc-400 hover:text-white transition-all rounded-none group">
+            <span>INSTAGRAM (@dantetoto_)</span>
+            <span class="text-[#39FF14] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+          </a>
+          <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 border border-white/10 hover:border-[#39FF14]/50 bg-[#0A0A0C] hover:bg-white/[0.03] text-zinc-400 hover:text-white transition-all rounded-none group">
+            <span>SOUNDCLOUD</span>
+            <span class="text-[#39FF14] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+          </a>
+          <a href="https://es.ra.co/dj/dantetoto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 border border-white/10 hover:border-[#39FF14]/50 bg-[#0A0A0C] hover:bg-white/[0.03] text-zinc-400 hover:text-white transition-all rounded-none group">
+            <span>RESIDENT ADVISOR</span>
+            <span class="text-[#39FF14] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER                                                    -->
+  <!-- ========================================================= -->
+  <footer class="border-t border-white/[0.08] bg-[#050505] py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+      <div>© Dante Toto. Barcelona.</div>
+      <div class="flex items-center gap-4">
+        <a href="https://es.ra.co/dj/dantetoto" target="_blank" rel="noopener noreferrer" class="hover:text-[#39FF14] transition-colors">Resident Advisor</a>
+        <span>•</span>
+        <a href="https://www.instagram.com/dantetoto_/" target="_blank" rel="noopener noreferrer" class="hover:text-[#39FF14] transition-colors">Instagram</a>
+        <span>•</span>
+        <span data-i18n="footerLocation">Barcelona, España</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toastNotice" class="toast-notice"></div>
+
+  <!-- JavaScript Engine -->
+  <script src="main.js"></script>
+</body>
+</html>

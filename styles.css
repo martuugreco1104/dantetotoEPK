@@ -1,0 +1,504 @@
+/* ========================================================= */
+/* DANTE TOTO — EPK & LANDING PAGE STYLES                    */
+/* Aesthetic: Deep Black / Industrial Minimal / Neon #39FF14 */
+/* ========================================================= */
+
+:root {
+  --neon: #39ff14;
+  --neon-hover: #32e010;
+  --neon-glow: rgba(57, 255, 20, 0.25);
+  --neon-glow-subtle: rgba(57, 255, 20, 0.12);
+  --bg-black: #050505;
+  --bg-card: #0c0c0c;
+  --bg-surface: #121214;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-muted: rgba(255, 255, 255, 0.15);
+  --text-muted: #888888;
+}
+
+/* Global scroll behavior and anchor padding */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Evita que la navbar fija tape los títulos de sección */
+  background-color: var(--bg-black);
+  color: #f4f4f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-black);
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Global Keyboard Navigation Focus State (WCAG 2.4.7 AA/AAA) */
+:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #050505, 0 0 0 4px #39ff14 !important;
+}
+
+::selection {
+  background-color: var(--neon);
+  color: #000000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon);
+}
+
+/* Hide scrollbar for mobile carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 1. Hero Glow Behind Logo & Dark Vignette */
+.hero-logo-glow {
+  background: radial-gradient(circle, rgba(57, 255, 20, 0.15) 0%, transparent 70%);
+}
+
+.hero-vignette-radial {
+  background: radial-gradient(circle at center, transparent 15%, rgba(5, 5, 5, 0.6) 60%, #050505 95%);
+}
+
+/* Hero photo mask: smooth horizontal dissolution into pure black */
+.hero-photo-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.85) 20%, #000000 30%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.85) 20%, #000000 30%);
+}
+
+/* ========================================================= */
+/* DEFORMABLE LIQUID 3D WIREFRAME MESH (HERO CANVAS)         */
+/* ========================================================= */
+
+#heroMeshCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  z-index: 5;
+  mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.65) 75%, transparent 96%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.65) 75%, transparent 96%);
+}
+
+/* Hero photo custom focal framing & vertical offset: head clearance + full mixer view */
+.hero-photo-framing {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+@media (min-width: 768px) {
+  .hero-photo-framing {
+    object-fit: contain;
+    object-position: right bottom;
+  }
+}
+
+/* Navbar Brand Logo */
+.nav-logo-img {
+  mix-blend-mode: screen;
+  height: 2.125rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hero Logo with feather mask and 100% screen transparency */
+.hero-logo-screen {
+  mix-blend-mode: screen;
+  background-color: transparent;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 95%);
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 95%);
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Hero background photo with curated dark club color grade */
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: contrast(1.15) saturate(0.85) brightness(0.72);
+  opacity: 0.62;
+}
+
+/* Hero Title Typography */
+.hero-title-text {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95);
+}
+
+/* 2. Waveform Container & Scrubber */
+.waveform-container {
+  position: relative;
+  width: 100%;
+  height: 64px;
+  background: #08080a;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.waveform-container:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+#waveformCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.waveform-scrubber {
+  position: absolute;
+  top: 0;
+  left: 28%;
+  width: 2px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+  pointer-events: none;
+  transition: left 0.1s linear;
+}
+
+/* 3. Bio Typography Quote & Minimalist Tabs */
+.bio-quote {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: #e4e4e7;
+}
+
+.bio-tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+}
+
+.bio-tab-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888888;
+  cursor: pointer;
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+.bio-tab-btn:hover {
+  color: #cccccc;
+}
+
+.bio-tab-btn.active {
+  color: #ffffff;
+}
+
+.bio-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--neon);
+}
+
+/* Bio Content Smooth Opacity & Fade-in */
+.bio-pane {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bio-pane.is-switching {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+/* 4. Live Sessions Video Cards & Sound Toggle */
+.video-card video {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-card:hover video {
+  transform: scale(1.03);
+}
+
+.sound-toggle-btn {
+  position: relative;
+  min-height: 36px;
+  transition: all 0.2s ease;
+}
+
+/* Touch target expansion for mobile ergonomics (WCAG 2.5.5) */
+@media (pointer: coarse) {
+  .sound-toggle-btn::after {
+    content: '';
+    position: absolute;
+    inset: -6px -6px;
+    min-width: 44px;
+    min-height: 44px;
+    pointer-events: auto;
+  }
+}
+
+.sound-toggle-btn.is-active {
+  border-color: var(--neon) !important;
+  color: var(--neon) !important;
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.35);
+}
+
+.sound-toggle-btn.is-active .sound-status-indicator {
+  background-color: var(--neon) !important;
+  box-shadow: 0 0 8px var(--neon);
+}
+
+/* 5. Download Cards (EPK, Rider, Photos HQ) */
+.presskit-card {
+  background-color: #0c0c0c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.presskit-card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: #121214;
+  transform: translateY(-2px);
+}
+
+/* 6. Form Inputs & Placeholders */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 400;
+}
+
+/* Toast Notification */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #111113;
+  color: #ffffff;
+  border: 1px solid var(--border-muted);
+  border-left: 3px solid #ffffff;
+  padding: 12px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ========================================================= */
+/* 7. DANTE TOTO — EDITORIAL CLUB POSTER STYLES              */
+/* ========================================================= */
+
+.hero-logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+}
+
+/* ========================================================= */
+/* 7B. CABINA VU-METER & PHOTOGRAPHY VIEWFINDER STYLES       */
+/* ========================================================= */
+
+/* Live Cabina Audio VU-Meter Indicator */
+.vu-meter-bar {
+  width: 2px;
+  background-color: var(--neon);
+  border-radius: 1px;
+  transform-origin: bottom;
+  animation: vuMeterIdle 1.2s infinite ease-in-out;
+}
+
+.video-card.is-active .vu-meter-bar:nth-child(1) { animation: vuMeterActive 0.35s infinite alternate ease-in-out; }
+.video-card.is-active .vu-meter-bar:nth-child(2) { animation: vuMeterActive 0.45s 0.1s infinite alternate ease-in-out; }
+.video-card.is-active .vu-meter-bar:nth-child(3) { animation: vuMeterActive 0.3s 0.2s infinite alternate ease-in-out; }
+
+@keyframes vuMeterActive {
+  0% { height: 3px; opacity: 0.4; }
+  100% { height: 14px; opacity: 1; filter: drop-shadow(0 0 4px #39FF14); }
+}
+
+@keyframes vuMeterIdle {
+  0%, 100% { height: 2px; opacity: 0.25; }
+  50% { height: 5px; opacity: 0.4; }
+}
+
+/* Hasselblad / Leica Viewfinder Reticle for Shoots */
+.viewfinder-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.group:hover .viewfinder-corner {
+  opacity: 1;
+}
+
+.viewfinder-tl { top: 10px; left: 10px; border-top: 1.5px solid var(--neon); border-left: 1.5px solid var(--neon); }
+.viewfinder-tr { top: 10px; right: 10px; border-top: 1.5px solid var(--neon); border-right: 1.5px solid var(--neon); }
+.viewfinder-bl { bottom: 10px; left: 10px; border-bottom: 1.5px solid var(--neon); border-left: 1.5px solid var(--neon); }
+.viewfinder-br { bottom: 10px; right: 10px; border-bottom: 1.5px solid var(--neon); border-right: 1.5px solid var(--neon); }
+
+/* ========================================================= */
+/* 8. INTERACTIVE SPOTLIGHT CARDS & SECTION TECH DIVIDERS    */
+/* ========================================================= */
+
+/* Glassmorphism styling with cross-browser backdrop filter */
+.glass-panel {
+  background: rgba(10, 10, 12, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(57, 255, 20, 0.5) !important;
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.15), inset 0 0 15px rgba(57, 255, 20, 0.04);
+}
+
+.glass-card-featured {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #39FF14 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-featured:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+  border-left-color: #39FF14 !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(57, 255, 20, 0.15);
+}
+
+/* Spotlight glow effect following mouse on interactive cards */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(350px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(57, 255, 20, 0.16), transparent 50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(57, 255, 20, 0.45) !important;
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.12), inset 0 0 15px rgba(57, 255, 20, 0.04);
+}
+
+/* Technical wireframe grid texture across sections */
+.bg-tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(57, 255, 20, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Technical section dividing bar with live pulse / VU-meter laser */
+.section-divider-tech {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #050505;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.section-divider-tech::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--scroll-pulse-x, 0%);
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #39FF14, transparent);
+  box-shadow: 0 0 8px #39FF14, 0 0 16px rgba(57, 255, 20, 0.4);
+  opacity: 0.85;
+  pointer-events: none;
+  transition: left 0.12s linear;
+}
