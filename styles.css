@@ -101,7 +101,7 @@ body {
 /* Hero photo custom focal framing & vertical offset: head clearance + full mixer view */
 .hero-photo-framing {
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center 12%;
 }
 
 @media (min-width: 768px) {

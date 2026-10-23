@@ -911,4 +911,46 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   }
+
+  // 16. GIGS ARCHIVE HORIZONTAL CAROUSEL CONTROLLER
+  const gigsCarousel = document.getElementById('gigsCarouselContainer');
+  const gigsPrevBtn = document.getElementById('gigsScrollPrev');
+  const gigsNextBtn = document.getElementById('gigsScrollNext');
+
+  if (gigsCarousel) {
+    if (gigsPrevBtn) {
+      gigsPrevBtn.addEventListener('click', () => {
+        gigsCarousel.scrollBy({ left: -340, behavior: 'smooth' });
+      });
+    }
+    if (gigsNextBtn) {
+      gigsNextBtn.addEventListener('click', () => {
+        gigsCarousel.scrollBy({ left: 340, behavior: 'smooth' });
+      });
+    }
+
+    // Drag-to-scroll with mouse on desktop
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    gigsCarousel.addEventListener('mousedown', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      isDown = true;
+      startX = e.pageX - gigsCarousel.offsetLeft;
+      scrollLeft = gigsCarousel.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    gigsCarousel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - gigsCarousel.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      gigsCarousel.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
