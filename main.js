@@ -59,15 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
       pressHeadline: "MATERIAL DESCARGABLE PARA PROMOTORES",
       pressSubtitle: "Acceso directo a documentos técnicos y material promocional oficial.",
       btnEpkDossier: "DESCARGAR DOSSIER / EPK (.PDF)",
-      btnTechRider: "RIDER TÉCNICO (.PDF)",
+      btnLogoPng: "DESCARGAR LOGO OFICIAL (.PNG)",
       btnPressPhotos: "FOTOS DE PRENSA HQ (.ZIP)",
       epkCardDesc: "Biografía completa, perfil musical y notas de prensa oficiales.",
-      riderCardDesc: "Requerimientos de cabina, mixers, monitoreo y conectividad.",
+      logoCardDesc: "Logo tipográfico oficial en alta resolución con fondo transparente.",
       photosCardDesc: "Fotografías oficiales en 300 DPI listas para flyers y cartelería.",
-      riderSummaryTitle: "RIDER TÉCNICO & HOSPITALITY (RESUMEN RÁPIDO)",
+      riderSummaryTitle: "// RIDER TÉCNICO & HOSPITALITY (RESUMEN RÁPIDO)",
       riderCopySpecsBtn: "[ COPIAR SPECS ]",
-      riderSpecsCopiedToast: "Rider técnico y hospitality copiado al portapapeles",
-      riderSpecsCopiedFeedback: "[ ✓ SPECS COPIADAS ]",
+      riderSpecsCopiedToast: "¡Copiado!",
+      riderSpecsCopiedFeedback: "[ ✓ ¡COPIADO! ]",
       riderColTech: "SETUP TÉCNICO EN CABINA",
       riderColHospitality: "HOSPITALITY",
       contactSectionTitle: "CONTRATACIONES Y CONTACTO DIRECTO",
@@ -145,15 +145,15 @@ document.addEventListener('DOMContentLoaded', () => {
       pressHeadline: "DOWNLOADABLE ASSETS FOR PROMOTERS",
       pressSubtitle: "Direct access to technical riders and official promotional assets for promoters and bookers.",
       btnEpkDossier: "DOWNLOAD EPK DOSSIER (.PDF)",
-      btnTechRider: "TECHNICAL RIDER (.PDF)",
+      btnLogoPng: "DOWNLOAD OFFICIAL LOGO (.PNG)",
       btnPressPhotos: "HQ PRESS PHOTOS (.ZIP)",
       epkCardDesc: "Complete biography, musical profile, and official press notes.",
-      riderCardDesc: "Booth setup, mixers, monitoring, and connectivity specifications.",
+      logoCardDesc: "Official typography logo in high resolution with transparent background.",
       photosCardDesc: "Official 300 DPI high-res photography for flyers and venues.",
-      riderSummaryTitle: "TECHNICAL RIDER & HOSPITALITY (QUICK SUMMARY)",
+      riderSummaryTitle: "// TECHNICAL RIDER & HOSPITALITY (QUICK SUMMARY)",
       riderCopySpecsBtn: "[ COPY SPECS ]",
-      riderSpecsCopiedToast: "Tech rider & hospitality specs copied to clipboard",
-      riderSpecsCopiedFeedback: "[ ✓ SPECS COPIED ]",
+      riderSpecsCopiedToast: "Copied!",
+      riderSpecsCopiedFeedback: "[ ✓ COPIED! ]",
       riderColTech: "BOOTH TECHNICAL SETUP",
       riderColHospitality: "HOSPITALITY",
       contactSectionTitle: "BOOKINGS & DIRECT CONTACT",
@@ -385,10 +385,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     copyRiderBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(riderSpecsText).then(() => {
-        showToast(i18n[currentLang].riderSpecsCopiedToast || "Rider técnico copiado al portapapeles");
+        showToast(i18n[currentLang].riderSpecsCopiedToast || "¡Copiado!");
         if (copyRiderText) {
           const originalText = i18n[currentLang].riderCopySpecsBtn || "[ COPIAR SPECS ]";
-          copyRiderText.textContent = i18n[currentLang].riderSpecsCopiedFeedback || "[ ✓ SPECS COPIADAS ]";
+          copyRiderText.textContent = i18n[currentLang].riderSpecsCopiedFeedback || "[ ✓ ¡COPIADO! ]";
           if (copyRiderIcon) copyRiderIcon.style.display = 'none';
           copyRiderBtn.classList.add('bg-[#39FF14]', 'text-black', 'border-[#39FF14]', 'shadow-[0_0_15px_rgba(57,255,20,0.4)]');
           clearTimeout(copyRiderTimeout);
