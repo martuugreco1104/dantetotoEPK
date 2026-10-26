@@ -110,28 +110,28 @@
       <!-- Grilla Líquida Deformable 3D en Tiempo Real (Canvas Interactivo) -->
       <canvas id="heroMeshCanvas" class="absolute inset-0 w-full h-full pointer-events-none select-none z-[5]"></canvas>
 
-      <!-- Imagen de Fondo Hero: Dante Toto en cabina (PNG transparente en capa superior z-20) -->
-      <div class="absolute inset-0 md:left-auto md:right-0 w-full md:w-[52%] lg:w-[50%] h-full pointer-events-none select-none z-20 flex items-end justify-center md:justify-end overflow-hidden">
+      <!-- Imagen de Fondo Hero: Dante Toto en cabina (PNG transparente en capa z-10) -->
+      <div class="absolute inset-0 md:left-auto md:right-0 w-full md:w-[52%] lg:w-[50%] h-full pointer-events-none select-none z-10 flex items-start md:items-end justify-center md:justify-end overflow-hidden">
         <img 
           src="fotos/DANTE TOTO HERO 2.png" 
           alt="Dante Toto en cabina" 
-          class="w-full h-full object-cover md:object-contain object-bottom md:object-right-bottom select-none hero-photo-framing drop-shadow-[0_0_40px_rgba(57,255,20,0.18)]"
+          class="w-full h-full object-cover object-top md:object-contain md:object-right-bottom select-none hero-photo-framing drop-shadow-[0_0_40px_rgba(57,255,20,0.18)]"
         />
         <!-- Máscara de degradado para legibilidad en pantallas móviles (despejando el rostro de Dante) -->
-        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/90 via-50% to-transparent to-75% md:hidden pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/85 via-45% to-transparent to-70% md:hidden pointer-events-none"></div>
       </div>
 
       <!-- Contenedor Grilla Hero: 7 columnas para identidad y acciones, 5 columnas para la foto -->
-      <div class="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-10 h-full flex flex-col justify-center">
-        <div class="grid grid-cols-1 md:grid-cols-12 items-center">
+      <div class="relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-10 h-full flex flex-col justify-end md:justify-center pb-5 sm:pb-8 md:pb-0">
+        <div class="grid grid-cols-1 md:grid-cols-12 items-end md:items-center">
           
           <!-- Columna Izquierda: Identidad, Botones y Redes Sociales Principales -->
-          <div class="md:col-span-7 flex flex-col justify-center items-center md:items-start text-center md:text-left mt-8 md:mt-12 pt-6 sm:pt-8">
+          <div class="md:col-span-7 flex flex-col justify-end md:justify-center items-center md:items-start text-center md:text-left mt-0 md:mt-12 pt-0 md:pt-8">
             
             <!-- Logo Tipográfico Principal Gigante & Disponibilidad -->
             <div class="w-full max-w-2xl flex flex-col items-center md:items-start">
               <h1 class="sr-only" data-i18n="heroHeadline">DANTE TOTO</h1>
-              <img src="logos/Logo png hero.png" alt="DANTE TOTO" class="w-full max-w-[310px] xs:max-w-[360px] sm:max-w-[460px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] h-auto object-contain mx-auto md:mx-0 select-none filter brightness-125 drop-shadow-[0_0_35px_rgba(57,255,20,0.25)] drop-shadow-[0_8px_40px_rgba(0,0,0,0.95)]" />
+              <img src="logos/Logo png hero.png" alt="DANTE TOTO" class="w-full max-w-[260px] xs:max-w-[300px] sm:max-w-[420px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] h-auto object-contain mx-auto md:mx-0 select-none filter brightness-125 drop-shadow-[0_0_35px_rgba(57,255,20,0.25)] drop-shadow-[0_8px_40px_rgba(0,0,0,0.95)]" />
 
               <!-- Estatus / Disponibilidad de Booking justo debajo del logo (Desktop Only) -->
               <div class="hidden md:flex w-full justify-start mt-3 sm:mt-4">
@@ -146,40 +146,40 @@
             </div>
 
             <!-- Fila de Acciones: Botones Principales -->
-            <div class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mt-6 sm:mt-8 md:mt-10 w-full">
+            <div class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mt-3.5 sm:mt-4 md:mt-10 w-full">
               <!-- Botón Escuchar Set -->
-              <button type="button" id="heroCtaPlayBtn" class="inline-flex items-center justify-center gap-2 bg-[#39FF14] hover:bg-[#32e010] text-black font-mono font-bold text-xs uppercase px-5 sm:px-6 py-3 tracking-wider rounded-none transition-all shadow-[0_0_25px_rgba(57,255,20,0.6)] hover:shadow-[0_0_35px_rgba(57,255,20,0.85)] cursor-pointer select-none">
+              <button type="button" id="heroCtaPlayBtn" class="inline-flex items-center justify-center gap-2 bg-[#39FF14] hover:bg-[#32e010] text-black font-mono font-bold text-xs uppercase px-5 sm:px-6 py-2.5 sm:py-3 tracking-wider rounded-none transition-all shadow-[0_0_25px_rgba(57,255,20,0.6)] hover:shadow-[0_0_35px_rgba(57,255,20,0.85)] cursor-pointer select-none">
                 <span class="text-[10px]">▶</span>
                 <span data-i18n="heroCtaPlay">ESCUCHAR SET</span>
               </button>
 
               <!-- Botón Contacto -->
-              <a href="#contact" class="inline-flex items-center justify-center gap-1.5 border border-white/20 bg-black/60 hover:bg-white/10 hover:border-white text-white font-mono text-xs uppercase px-5 py-3 tracking-wider rounded-none transition-colors group">
+              <a href="#contact" class="inline-flex items-center justify-center gap-1.5 border border-white/20 bg-black/60 hover:bg-white/10 hover:border-white text-white font-mono text-xs uppercase px-5 py-2.5 sm:py-3 tracking-wider rounded-none transition-colors group">
                 <span data-i18n="heroCtaContact">CONTACTO</span>
                 <span class="text-zinc-400 group-hover:text-white transition-colors">→</span>
               </a>
             </div>
 
             <!-- Redes Sociales: Bloque separado en la parte inferior con contenedor glassmorphic sutil -->
-            <div class="w-full flex justify-center md:justify-start mt-6 sm:mt-8 md:mt-14">
-              <div class="bg-[#0A0A0C]/60 backdrop-blur-md border border-white/10 p-2 rounded-lg inline-flex items-center gap-2 shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
+            <div class="w-full flex justify-center md:justify-start mt-3 sm:mt-4 md:mt-14">
+              <div class="bg-[#0A0A0C]/60 backdrop-blur-md border border-white/10 p-1.5 sm:p-2 rounded-lg inline-flex items-center gap-2 shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/dantetoto_/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-md flex items-center justify-center border border-white/10 hover:border-[#39FF14] bg-white/[0.02] hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="Instagram @dantetoto_">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <a href="https://www.instagram.com/dantetoto_/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 sm:w-10 sm:h-10 rounded-md flex items-center justify-center border border-white/10 hover:border-[#39FF14] bg-white/[0.02] hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="Instagram @dantetoto_">
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
                 <!-- SoundCloud -->
-                <a href="https://soundcloud.com/dante-toto-724267601" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-md flex items-center justify-center border border-white/10 hover:border-[#39FF14] bg-white/[0.02] hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="SoundCloud">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M1.17 12.22c-.04.28-.07.57-.07.86 0 .34.03.67.08.99l.86-.14v-2.02l-.87.31zm1.75-.49v3.39l.88-.19V11.3l-.88.43zm1.75-.43v4.11l.88-.23v-4.18l-.88.3zm1.75-.24v4.49l.87-.27v-4.39l-.87.17zm1.75.14v4.46l.88-.3v-4.23l-.88.07zm1.75.25v4.32l.88-.33v-3.95l-.88-.04zm1.75.12v4.29l.88-.35v-3.83l-.88-.11zm1.75-.68v5.04l.87-.37V9.75c-.32.22-.61.45-.87.69zm1.75-1.34v6.46l.88-.41V8.22c-.33.24-.62.5-.88.76zm1.75-.8v7.35l.87-.45V6.78c-.32.26-.61.54-.87.82zm1.75-.61v8.06l.88-.5V5.55c-.32.29-.62.59-.88.9zm1.75-.27v8.43l.87-.55V4.83c-.31.33-.6.67-.87 1.02zm1.75-.02v8.55l.88-.61V4.99c-.31.37-.59.75-.88 1.15zm2.63.15c-.21-.49-.47-.95-.76-1.37v9.42l1.63-.78c1.37-.66 2.05-1.87 2.05-3.63 0-2.01-.94-3.32-2.92-3.64z"/></svg>
+                <a href="https://soundcloud.com/dante-toto-724267601" target="_blank" rel="noopener noreferrer" class="w-8 h-8 sm:w-10 sm:h-10 rounded-md flex items-center justify-center border border-white/10 hover:border-[#39FF14] bg-white/[0.02] hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="SoundCloud">
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><path d="M1.17 12.22c-.04.28-.07.57-.07.86 0 .34.03.67.08.99l.86-.14v-2.02l-.87.31zm1.75-.49v3.39l.88-.19V11.3l-.88.43zm1.75-.43v4.11l.88-.23v-4.18l-.88.3zm1.75-.24v4.49l.87-.27v-4.39l-.87.17zm1.75.14v4.46l.88-.3v-4.23l-.88.07zm1.75.25v4.32l.88-.33v-3.95l-.88-.04zm1.75.12v4.29l.88-.35v-3.83l-.88-.11zm1.75-.68v5.04l.87-.37V9.75c-.32.22-.61.45-.87.69zm1.75-1.34v6.46l.88-.41V8.22c-.33.24-.62.5-.88.76zm1.75-.8v7.35l.87-.45V6.78c-.32.26-.61.54-.87.82zm1.75-.61v8.06l.88-.5V5.55c-.32.29-.62.59-.88.9zm1.75-.27v8.43l.87-.55V4.83c-.31.33-.6.67-.87 1.02zm1.75-.02v8.55l.88-.61V4.99c-.31.37-.59.75-.88 1.15zm2.63.15c-.21-.49-.47-.95-.76-1.37v9.42l1.63-.78c1.37-.66 2.05-1.87 2.05-3.63 0-2.01-.94-3.32-2.92-3.64z"/></svg>
                 </a>
                 <!-- Resident Advisor -->
-                <a href="https://es.ra.co/dj/dantetoto" target="_blank" rel="noopener noreferrer" class="w-9 h-9 sm:w-10 sm:h-10 rounded-md flex items-center justify-center border border-white/10 hover:border-[#39FF14] bg-white/[0.02] hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="Resident Advisor">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4 4h4.5c3.03 0 5.5 2.47 5.5 5.5 0 2.08-1.16 3.89-2.88 4.82L16 20h-4l-4.5-5H6v5H4V4zm4.5 8c1.66 0 3-1.34 3-3s-1.34-3-3-3H6v6h2.5zm11.5-8h-3v16h3V4z"/></svg>
+                <a href="https://es.ra.co/dj/dantetoto" target="_blank" rel="noopener noreferrer" class="w-8 h-8 sm:w-10 sm:h-10 rounded-md flex items-center justify-center border border-white/10 hover:border-[#39FF14] bg-white/[0.02] hover:bg-[#39FF14]/10 text-zinc-400 hover:text-[#39FF14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] transition-all duration-200" title="Resident Advisor">
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><path d="M4 4h4.5c3.03 0 5.5 2.47 5.5 5.5 0 2.08-1.16 3.89-2.88 4.82L16 20h-4l-4.5-5H6v5H4V4zm4.5 8c1.66 0 3-1.34 3-3s-1.34-3-3-3H6v6h2.5zm11.5-8h-3v16h3V4z"/></svg>
                 </a>
               </div>
             </div>
 
             <!-- Estatus / Disponibilidad de Booking en Mobile (en la parte inferior del hero justo debajo de las redes sociales) -->
-            <div class="flex md:hidden w-full justify-center mt-4 sm:mt-5">
+            <div class="flex md:hidden w-full justify-center mt-2.5 sm:mt-3">
               <div class="inline-flex items-center gap-2 text-[9px] sm:text-[10px] font-mono tracking-[0.14em] text-zinc-300 uppercase select-none px-3.5 py-1.5 bg-[#0A0A0C]/75 backdrop-blur-md border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
                 <span class="relative flex h-2 w-2 shrink-0">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#39FF14] opacity-75"></span>
