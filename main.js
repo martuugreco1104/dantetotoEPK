@@ -23,10 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
       heroCtaContact: "CONTACTO",
       heroCtaBook: "EPK",
       heroVideoBadge: "CABINA // EN VIVO",
-      playerSectionTitle: "AUDIO // ÚLTIMA SESIÓN",
-      playerSetTitle: "EN VIVO EN DETROIT CLUB BCN",
-      playerSetSubtitle: "Sesión Étnica",
-      playerSetMeta: "62 min • Dark Tech House & Indie Dance • Barcelona",
+      audioHeadline: "SETS SELECCIONADOS",
+      scHeaderTitle: "SESIONES EN VIVO // SOUNDCLOUD",
+      scSectionTitle: "// ARCHIVO DE AUDIO // SOUNDCLOUD RELEASES",
+      scSectionSubtitle: "SESIONES EN VIVO & TRACKS SELECCIONADOS",
+      scViewAll: "VER CATÁLOGO EN SOUNDCLOUD",
+      scDirectLink: "ENLACE DIRECTO",
+      scBadgeSet1: "SELECTED SET",
+      scBadgeSet2: "SELECTED SET",
+      scTagRelease: "SOUNDCLOUD RELEASE",
       liveSectionTitle: "// SESIONES EN VIVO // CABINA",
       liveHeadline: "DIRECTO DESDE LA CABINA",
       liveHint: "[ VISTA PREVIA AL PASAR EL CURSOR • CLIC PARA AUDIO ]",
@@ -52,17 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
       shootsDownloadAll: "DESCARGAR TODAS EN ALTA RESOLUCIÓN (ZIP) →",
       pressSectionTitle: "KIT DE PRENSA",
       pressHeadline: "MATERIAL DESCARGABLE PARA PROMOTORES",
-      pressSubtitle: "Acceso inmediato a los documentos técnicos y promocionales de Dante Toto para promotores y bookers.",
-      btnEpkDossier: "DESCARGAR DOSSIER / EPK (PDF)",
-      btnTechRider: "RIDER TÉCNICO",
-      btnPressPhotos: "FOTOS DE PRENSA HQ",
-      techRiderBoxTag: "RIDER TÉCNICO // CABINA",
-      techRiderBoxTitle: "SETUP DE REPRODUCCIÓN & MEZCLA",
-      hospitalityBoxTag: "HOSPITALITY // CABINA & CAMERINO",
-      hospitalityBoxTitle: "REQUERIMIENTOS DE HOSPITALITY",
-      riderReadyToCopy: "● LISTO PARA COPIAR",
-      riderCopyBtn: "[ COPIAR SPECS AL PORTAPAPELES ]",
-      riderCopiedBtn: "[ ✓ SPECS COPIADAS ]",
+      pressSubtitle: "Acceso directo a documentos técnicos y material promocional oficial.",
+      btnEpkDossier: "DESCARGAR DOSSIER / EPK (.PDF)",
+      btnTechRider: "RIDER TÉCNICO (.PDF)",
+      btnPressPhotos: "FOTOS DE PRENSA HQ (.ZIP)",
+      epkCardDesc: "Biografía completa, perfil musical y notas de prensa oficiales.",
+      riderCardDesc: "Requerimientos de cabina, mixers, monitoreo y conectividad.",
+      photosCardDesc: "Fotografías oficiales en 300 DPI listas para flyers y cartelería.",
+      riderSummaryTitle: "RIDER TÉCNICO & HOSPITALITY (RESUMEN RÁPIDO)",
+      riderCopySpecsBtn: "[ COPIAR SPECS ]",
+      riderSpecsCopiedToast: "Rider técnico y hospitality copiado al portapapeles",
+      riderSpecsCopiedFeedback: "[ ✓ SPECS COPIADAS ]",
+      riderColTech: "SETUP TÉCNICO EN CABINA",
+      riderColHospitality: "HOSPITALITY & LOGÍSTICA",
       contactSectionTitle: "CONTRATACIONES Y CONTACTO DIRECTO",
       contactHeadline: "CONTACTO DANTE TOTO",
       contactSubtitle: "Para fechas en clubes, festivales y contrataciones en Europa y giras internacionales.",
@@ -102,10 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
       heroCtaContact: "CONTACT",
       heroCtaBook: "EPK",
       heroVideoBadge: "BOOTH // LIVE FEED",
-      playerSectionTitle: "AUDIO // LATEST SESSION",
-      playerSetTitle: "LIVE AT DETROIT CLUB BCN",
-      playerSetSubtitle: "Étnica Session",
-      playerSetMeta: "62 min • Dark Tech House & Indie Dance • Barcelona",
+      audioHeadline: "SELECTED SETS",
+      scHeaderTitle: "LIVE SESSIONS // SOUNDCLOUD",
+      scSectionTitle: "// AUDIO ARCHIVE // SOUNDCLOUD RELEASES",
+      scSectionSubtitle: "LIVE SESSIONS & SELECTED TRACKS",
+      scViewAll: "VIEW CATALOG ON SOUNDCLOUD",
+      scDirectLink: "DIRECT LINK",
+      scBadgeSet1: "SELECTED SET",
+      scBadgeSet2: "SELECTED SET",
+      scTagRelease: "SOUNDCLOUD RELEASE",
       liveSectionTitle: "// LIVE SESSIONS // BOOTH",
       liveHeadline: "DIRECT FROM THE DECKS",
       liveHint: "[ HOVER TO PREVIEW • CLICK FOR AUDIO ]",
@@ -129,19 +141,21 @@ document.addEventListener('DOMContentLoaded', () => {
       shootsSectionTitle: "PRESS PHOTOS",
       shootsSubtitle: "Official high-resolution photography ready for festival lineups, venue flyers, and media coverage.",
       shootsDownloadAll: "DOWNLOAD ALL AS HIGH-RES ZIP →",
-      pressSectionTitle: "PRESS KIT HUB",
+      pressSectionTitle: "PRESS KIT",
       pressHeadline: "DOWNLOADABLE ASSETS FOR PROMOTERS",
-      pressSubtitle: "Instant access to technical riders and promotional assets for promoters and festival curators.",
-      btnEpkDossier: "DOWNLOAD EPK DOSSIER (PDF)",
-      btnTechRider: "TECHNICAL RIDER",
-      btnPressPhotos: "HQ PRESS PHOTOS",
-      techRiderBoxTag: "TECH RIDER // BOOTH",
-      techRiderBoxTitle: "PLAYBACK & MIXING SETUP",
-      hospitalityBoxTag: "HOSPITALITY // BOOTH & GREEN ROOM",
-      hospitalityBoxTitle: "HOSPITALITY REQUIREMENTS",
-      riderReadyToCopy: "● READY TO COPY",
-      riderCopyBtn: "[ COPY SPECS TO CLIPBOARD ]",
-      riderCopiedBtn: "[ ✓ SPECS COPIED ]",
+      pressSubtitle: "Direct access to technical riders and official promotional assets for promoters and bookers.",
+      btnEpkDossier: "DOWNLOAD EPK DOSSIER (.PDF)",
+      btnTechRider: "TECHNICAL RIDER (.PDF)",
+      btnPressPhotos: "HQ PRESS PHOTOS (.ZIP)",
+      epkCardDesc: "Complete biography, musical profile, and official press notes.",
+      riderCardDesc: "Booth setup, mixers, monitoring, and connectivity specifications.",
+      photosCardDesc: "Official 300 DPI high-res photography for flyers and venues.",
+      riderSummaryTitle: "TECHNICAL RIDER & HOSPITALITY (QUICK SUMMARY)",
+      riderCopySpecsBtn: "[ COPY SPECS ]",
+      riderSpecsCopiedToast: "Tech rider & hospitality specs copied to clipboard",
+      riderSpecsCopiedFeedback: "[ ✓ SPECS COPIED ]",
+      riderColTech: "BOOTH TECHNICAL SETUP",
+      riderColHospitality: "HOSPITALITY & LOGISTICS",
       contactSectionTitle: "BOOKINGS & DIRECT CONTACT",
       contactHeadline: "REACH DANTE TOTO",
       contactSubtitle: "Inquiries for European club dates, festival stages, and worldwide tours.",
@@ -246,125 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabFull.addEventListener('click', () => switchBioTab('full'));
   }
 
-  // 5. AUDIO ENGINE & WAVEFORM CANVAS (WEB AUDIO API)
-  let audioCtx = null;
-  let isPlaying = false;
-  let tempo = 124;
-  let rhythmTimer = null;
-  let rhythmStep = 0;
-  let trackSec = 96; // 01:36
-  const totalSec = 3720; // 62 min
-
-  const mainPlayBtn = document.getElementById('mainPlayBtn');
-  const playBtnIcon = document.getElementById('playBtnIcon');
-  const timeDisplay = document.getElementById('trackTimeDisplay');
-  const scrubber = document.getElementById('waveformScrubber');
-  const canvas = document.getElementById('waveformCanvas');
-  const ctx = canvas ? canvas.getContext('2d') : null;
-
-  function initAudio() {
-    if (!audioCtx) {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      audioCtx = new AudioContextClass();
-    }
-    if (audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-  }
-
-  function triggerBeat() {
-    if (!audioCtx) return;
-    const now = audioCtx.currentTime;
-
-    // Sub kick at steps 0, 4, 8, 12
-    if (rhythmStep % 4 === 0) {
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.frequency.setValueAtTime(115, now);
-      osc.frequency.exponentialRampToValueAtTime(32, now + 0.14);
-      gain.gain.setValueAtTime(0.55, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.22);
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.start(now);
-      osc.stop(now + 0.24);
-    }
-
-    // Hi-hat at steps 2, 6, 10, 14
-    if (rhythmStep % 4 === 2) {
-      const bufferSize = audioCtx.sampleRate * 0.04;
-      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-      const data = buffer.getChannelData(0);
-      for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
-      const noise = audioCtx.createBufferSource();
-      noise.buffer = buffer;
-      const filter = audioCtx.createBiquadFilter();
-      filter.type = 'highpass';
-      filter.frequency.setValueAtTime(7800, now);
-      const gain = audioCtx.createGain();
-      gain.gain.setValueAtTime(0.12, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
-      noise.connect(filter);
-      filter.connect(gain);
-      gain.connect(audioCtx.destination);
-      noise.start(now);
-    }
-
-    rhythmStep = (rhythmStep + 1) % 16;
-  }
-
-  function formatTime(s) {
-    const mins = Math.floor(s / 60).toString().padStart(2, '0');
-    const secs = Math.floor(s % 60).toString().padStart(2, '0');
-    return `${mins}:${secs}`;
-  }
-
-  function startAudio() {
-    // Mute any unmuted video if audio starts
-    muteAllVideos();
-
-    initAudio();
-    isPlaying = true;
-    if (mainPlayBtn) {
-      mainPlayBtn.setAttribute('aria-label', currentLang === 'es' ? 'Pausar set' : 'Pause set');
-    }
-    if (playBtnIcon) {
-      playBtnIcon.innerHTML = `<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>`;
-    }
-
-    const interval = ((60 / tempo) / 4) * 1000;
-    rhythmTimer = setInterval(() => {
-      triggerBeat();
-      trackSec += 0.12;
-      if (timeDisplay) timeDisplay.textContent = `${formatTime(trackSec)} / 62:00`;
-      if (scrubber) scrubber.style.left = `${(trackSec / totalSec) * 100}%`;
-    }, interval);
-
-    showToast(`${i18n[currentLang].playerSetTitle} // ${i18n[currentLang].playerSetSubtitle}`);
-  }
-
-  function pauseAudio() {
-    isPlaying = false;
-    if (rhythmTimer) {
-      clearInterval(rhythmTimer);
-      rhythmTimer = null;
-    }
-    if (mainPlayBtn) {
-      mainPlayBtn.setAttribute('aria-label', currentLang === 'es' ? 'Reproducir set' : 'Play set');
-    }
-    if (playBtnIcon) {
-      playBtnIcon.innerHTML = `<polygon points="6 4 20 12 6 20 6 4"></polygon>`;
-    }
-  }
-
-  if (mainPlayBtn) {
-    mainPlayBtn.addEventListener('click', () => {
-      if (!isPlaying) startAudio();
-      else pauseAudio();
-    });
-  }
-
-  // Hero primary button: scrolls smoothly to control center and starts audio
+  // 5. AUDIO NAVIGATION (Scroll to SoundCloud sets)
   const heroCtaPlayBtn = document.getElementById('heroCtaPlayBtn');
   if (heroCtaPlayBtn) {
     heroCtaPlayBtn.addEventListener('click', (e) => {
@@ -373,61 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (playerSec) {
         playerSec.scrollIntoView({ behavior: 'smooth' });
       }
-      if (!isPlaying) startAudio();
     });
   }
-
-  // 6. WAVEFORM CANVAS VISUALIZER (Neon Green #00ff66)
-  let waveTick = 0;
-  function renderWaveform() {
-    if (!ctx || !canvas) return;
-
-    if (canvas.width !== canvas.clientWidth) {
-      canvas.width = canvas.clientWidth;
-      canvas.height = canvas.clientHeight;
-    }
-
-    const w = canvas.width;
-    const h = canvas.height;
-    const mid = h / 2;
-
-    ctx.fillStyle = '#08080a';
-    ctx.fillRect(0, 0, w, h);
-
-    const barW = 3;
-    const gap = 2;
-    const count = Math.floor(w / (barW + gap));
-
-    if (isPlaying) waveTick += 0.08;
-
-    for (let i = 0; i < count; i++) {
-      const x = i * (barW + gap);
-      const playedPercent = trackSec / totalSec;
-
-      let amp;
-      if (isPlaying) {
-        const sin1 = Math.sin(i * 0.08 + waveTick);
-        const sin2 = Math.cos(i * 0.16 - waveTick * 1.5);
-        amp = (Math.abs(sin1 * 0.5 + sin2 * 0.4) * 0.85);
-      } else {
-        amp = Math.abs(Math.sin(i * 0.06) * 0.35) + 0.12;
-      }
-
-      const barH = Math.max(3, amp * (h * 0.8));
-      const y = mid - barH / 2;
-
-      if (x < w * playedPercent) {
-        ctx.fillStyle = '#00ff66'; // Neon Accent
-      } else {
-        ctx.fillStyle = '#222226';
-      }
-
-      ctx.fillRect(x, y, barW, barH);
-    }
-
-    requestAnimationFrame(renderWaveform);
-  }
-  requestAnimationFrame(renderWaveform);
 
   // 7. LIVE SESSIONS VIDEO CONTROLLER (Hover Preview & Sound Toggle)
   const videoCards = document.querySelectorAll('.video-card');
@@ -531,33 +374,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8B. COPY TECHNICAL RIDER CONDENSED SPECS (STAGE MANAGERS & BOOKERS)
+  // 8B. COPY TECH RIDER & HOSPITALITY SPECS (QUICK SUMMARY)
   const copyRiderBtn = document.getElementById('copyRiderBtn');
   const copyRiderText = document.getElementById('copyRiderText');
   const copyRiderIcon = document.getElementById('copyRiderIcon');
   let copyRiderTimeout = null;
 
   if (copyRiderBtn) {
-    const riderSpecs = "DANTE TOTO // TECHNICAL RIDER & HOSPITALITY 2026\n\n[ SETUP TÉCNICO EN CABINA ]:\n- 3x Pioneer CDJ-3000 (enlazados vía Pro DJ Link / Gigabit Ethernet Hub)\n- 1x Pioneer DJM-V10 o Allen & Heath Xone:96 (Mixer profesional 4/6 canales)\n- Monitoreo Booth L+R: 2x monitores activos de alta fidelidad a nivel del oído con control de volumen independiente en mixer\n- Cabina antivibración desacoplada + tomas de corriente 220V dedicadas\n\n[ HOSPITALITY & LOGÍSTICA ]:\n- 6x Botellas de agua mineral sin gas (3 frías + 3 a temperatura ambiente en cabina)\n- 1x Pack de cervezas premium frías disponibles en cabina y camerino\n- Gaseosas / refrescos (Coca-Cola / Sprite / Red Bull con hielo disponible)\n- 2x Toallas negras de cabina limpias\n\nDirect Contact: bookings@dantetoto.com";
+    const riderSpecsText = "DANTE TOTO — TECH RIDER & HOSPITALITY 2026\n\n[ SETUP TÉCNICO EN CABINA ]\n- Audio / Decks: 3x Pioneer CDJ-3000 (enlace Pro DJ Link / Gigabit Hub)\n- Mixer: 1x Pioneer DJM-V10 o Allen & Heath Xone:96 (4/6 canales)\n- Monitoreo Booth: 2x monitores activos estéreo a nivel de oído con control independiente\n- Cabina: Mesa estable desacoplada de subgraves + 2 tomas directas 220V Schuko dedicadas\n\n[ HOSPITALITY & LOGÍSTICA ]\n- Agua Mineral: 6x botellas sin gas (3 frías + 3 a temp. ambiente en cabina)\n- Bebidas: Pack cervezas premium + Red Bull y refrescos con hielo\n- Toallas: 2x toallas de mano negras limpias de algodón en cabina\n- Logística: Escolta de cabina + acreditación All-Access + espacio seguro para backline\n\nContacto Booking: bookings@dantetoto.com";
 
     copyRiderBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(riderSpecs).then(() => {
-        showToast(currentLang === 'es' ? 'Rider técnico copiado al portapapeles' : 'Tech Rider specs copied to clipboard');
+      navigator.clipboard.writeText(riderSpecsText).then(() => {
+        showToast(i18n[currentLang].riderSpecsCopiedToast || "Rider técnico copiado al portapapeles");
         if (copyRiderText) {
-          const originalText = copyRiderText.textContent;
-          copyRiderText.textContent = currentLang === 'es' ? '[ ✓ SPECS COPIADAS ]' : '[ ✓ SPECS COPIED ]';
-          copyRiderBtn.classList.add('border-[#39FF14]', 'text-[#39FF14]', 'shadow-[0_0_15px_rgba(57,255,20,0.3)]');
+          const originalText = i18n[currentLang].riderCopySpecsBtn || "[ COPIAR SPECS ]";
+          copyRiderText.textContent = i18n[currentLang].riderSpecsCopiedFeedback || "[ ✓ SPECS COPIADAS ]";
+          if (copyRiderIcon) copyRiderIcon.style.display = 'none';
+          copyRiderBtn.classList.add('bg-[#39FF14]', 'text-black', 'border-[#39FF14]', 'shadow-[0_0_15px_rgba(57,255,20,0.4)]');
           clearTimeout(copyRiderTimeout);
           copyRiderTimeout = setTimeout(() => {
             copyRiderText.textContent = originalText;
-            copyRiderBtn.classList.remove('border-[#39FF14]', 'text-[#39FF14]', 'shadow-[0_0_15px_rgba(57,255,20,0.3)]');
-          }, 2500);
+            if (copyRiderIcon) copyRiderIcon.style.display = '';
+            copyRiderBtn.classList.remove('bg-[#39FF14]', 'text-black', 'border-[#39FF14]', 'shadow-[0_0_15px_rgba(57,255,20,0.4)]');
+          }, 2000);
         }
       }).catch(() => {
         showToast('bookings@dantetoto.com');
       });
     });
   }
+
 
   // 9. DOWNLOADS WITH TOAST NOTIFICATION
   document.querySelectorAll('.trigger-dl').forEach(btn => {
@@ -954,43 +800,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 17. PRESS KIT COMPACT TABS CONTROLLER (Rider Specs vs Hospitality)
-  const presskitTabs = document.querySelectorAll('.presskit-tab-btn');
-  const presskitPanels = document.querySelectorAll('.presskit-tab-panel');
-
-  if (presskitTabs.length > 0) {
-    presskitTabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetTab = btn.getAttribute('data-tab');
-        
-        presskitTabs.forEach(t => {
-          t.classList.remove('active', 'border-[#39FF14]', 'text-white', 'bg-white/[0.08]');
-          t.classList.add('border-transparent', 'text-zinc-400', 'bg-transparent');
-          const dot = t.querySelector('.tab-indicator-dot');
-          if (dot) {
-            dot.classList.remove('bg-[#39FF14]');
-            dot.classList.add('bg-zinc-600');
-          }
-        });
-
-        btn.classList.add('active', 'border-[#39FF14]', 'text-white', 'bg-white/[0.08]');
-        btn.classList.remove('border-transparent', 'text-zinc-400', 'bg-transparent');
-        const activeDot = btn.querySelector('.tab-indicator-dot');
-        if (activeDot) {
-          activeDot.classList.remove('bg-zinc-600');
-          activeDot.classList.add('bg-[#39FF14]');
-        }
-
-        presskitPanels.forEach(panel => {
-          if (panel.id === targetTab) {
-            panel.classList.remove('hidden');
-            panel.classList.add('block');
-          } else {
-            panel.classList.add('hidden');
-            panel.classList.remove('block');
-          }
-        });
-      });
-    });
-  }
 });
