@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bioTabShort: "BIO CORTA",
       bioTabFull: "BIO COMPLETA",
       bioQuote: "“Sonido orientado a la narrativa de club: tensión progresiva, frecuencias analógicas y un pulso hipnótico concebido para extender la energía de la pista.”",
-      bioShortP1: "Dante Toto (@dantetoto_) es un DJ y artista electrónico argentino establecido en Barcelona. Su sonido fusiona el pulso hipnótico del Indie Dance con las frecuencias graves del Dark Tech House y la contundencia del Techno, con presentaciones regulares en espacios clave de la escena underground barcelonesa como Detroit Club y Bridge 48 (Étnica).",
+      bioShortP1: "Dante Toto (@dantetoto_), argentino radicado en Barcelona. Su sonido fusiona el pulso hipnótico del Indie Dance con las frecuencias graves del Dark Tech House y la contundencia del Techno, con presentaciones regulares en espacios clave de la escena underground barcelonesa como Detroit Club y Bridge 48 (Étnica).",
       bioFullP1: "Originario de Argentina y radicado en la vibrante escena electrónica de Barcelona, Dante Toto (@dantetoto_) ha consolidado una propuesta sonora refinada, técnica y orientada a la narrativa de club. Con presencia en cabinas de referencia underground como Detroit Club BCN y el hub creativo Bridge 48 (en showcases como Étnica), sus sesiones evitan fórmulas predecibles para sumergir a la pista en atmósferas oscuras y pulsantes.",
       bioFullP2: "Su versatilidad técnica y lectura quirúrgica del público le permiten adaptarse con solidez a diferentes dinámicas de cabina: desde warm-ups introspectivos de tensión progresiva hasta slots de hora pico de alto impacto o extended sets donde la música evoluciona hacia estados hipnóticos de groove ininterrumpido.",
       shootsSectionTitle: "FOTOS DE PRENSA",
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       riderSpecsCopiedToast: "Rider técnico y hospitality copiado al portapapeles",
       riderSpecsCopiedFeedback: "[ ✓ SPECS COPIADAS ]",
       riderColTech: "SETUP TÉCNICO EN CABINA",
-      riderColHospitality: "HOSPITALITY & LOGÍSTICA",
+      riderColHospitality: "HOSPITALITY",
       contactSectionTitle: "CONTRATACIONES Y CONTACTO DIRECTO",
       contactHeadline: "CONTACTO DANTE TOTO",
       contactSubtitle: "Para fechas en clubes, festivales y contrataciones en Europa y giras internacionales.",
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bioTabShort: "SHORT BIO",
       bioTabFull: "FULL BIO",
       bioQuote: "“Club narrative driven sound: progressive tension, raw analog low-ends, and a hypnotic pulse engineered to sustain dancefloor momentum.”",
-      bioShortP1: "Dante Toto (@dantetoto_) is an Argentine DJ and electronic artist based in Barcelona. His sound blends the hypnotic pulse of Indie Dance with the deep low-ends of Dark Tech House and the steady drive of contemporary Techno, performing regularly across key Barcelona underground venues such as Detroit Club and Bridge 48 (Étnica).",
+      bioShortP1: "Dante Toto (@dantetoto_), based in Barcelona (AR). His sound blends the hypnotic pulse of Indie Dance with the deep low-ends of Dark Tech House and the steady drive of contemporary Techno, performing regularly across key Barcelona underground venues such as Detroit Club and Bridge 48 (Étnica).",
       bioFullP1: "Hailing from Argentina and deeply embedded in Barcelona’s electronic vanguard, Dante Toto (@dantetoto_) has forged a sophisticated, narrative-driven club identity. With appearances across Barcelona's underground spaces like Detroit Club BCN and creative hub Bridge 48 (Étnica), his sets reject predictable club formulas to draw dance floors into hypnotic, driving atmospheres.",
       bioFullP2: "His acute dance-floor intuition and technical precision allow him to command different club contexts: from nuanced, tension-building warm-ups to high-impact peak-time slots and extended exploratory journeys that maintain an unbroken groove.",
       shootsSectionTitle: "PRESS PHOTOS",
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       riderSpecsCopiedToast: "Tech rider & hospitality specs copied to clipboard",
       riderSpecsCopiedFeedback: "[ ✓ SPECS COPIED ]",
       riderColTech: "BOOTH TECHNICAL SETUP",
-      riderColHospitality: "HOSPITALITY & LOGISTICS",
+      riderColHospitality: "HOSPITALITY",
       contactSectionTitle: "BOOKINGS & DIRECT CONTACT",
       contactHeadline: "REACH DANTE TOTO",
       contactSubtitle: "Inquiries for European club dates, festival stages, and worldwide tours.",
@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let copyRiderTimeout = null;
 
   if (copyRiderBtn) {
-    const riderSpecsText = "DANTE TOTO — TECH RIDER & HOSPITALITY 2026\n\n[ SETUP TÉCNICO EN CABINA ]\n- Audio / Decks: 3x Pioneer CDJ-3000 (enlace Pro DJ Link / Gigabit Hub)\n- Mixer: 1x Pioneer DJM-V10 o Allen & Heath Xone:96 (4/6 canales)\n- Monitoreo Booth: 2x monitores activos estéreo a nivel de oído con control independiente\n- Cabina: Mesa estable desacoplada de subgraves + 2 tomas directas 220V Schuko dedicadas\n\n[ HOSPITALITY & LOGÍSTICA ]\n- Agua Mineral: 6x botellas sin gas (3 frías + 3 a temp. ambiente en cabina)\n- Bebidas: Pack cervezas premium + Red Bull y refrescos con hielo\n- Toallas: 2x toallas de mano negras limpias de algodón en cabina\n- Logística: Escolta de cabina + acreditación All-Access + espacio seguro para backline\n\nContacto Booking: bookings@dantetoto.com";
+    const riderSpecsText = "DANTE TOTO — TECH RIDER & HOSPITALITY 2026\n\n[ SETUP TÉCNICO EN CABINA ]\n- Audio / Decks: 3x Pioneer CDJ-3000 (enlace Pro DJ Link / Gigabit Hub)\n- Mixer: 1x Pioneer DJM-V10 o Allen & Heath Xone:96 (4/6 canales)\n- Monitoreo Booth: 2x monitores activos estéreo a nivel de oído con control independiente\n\n[ HOSPITALITY ]\n- Agua Mineral: 6x botellas sin gas\n- Bebidas: Cerveza y bebidas\n\nContacto Booking: bookings@dantetoto.com";
 
     copyRiderBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(riderSpecsText).then(() => {
