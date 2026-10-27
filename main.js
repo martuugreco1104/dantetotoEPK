@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
       scTagRelease: "SOUNDCLOUD RELEASE",
       liveSectionTitle: "// SESIONES EN VIVO // CABINA",
       liveHeadline: "DIRECTO DESDE LA CABINA",
-      liveHint: "[ VISTA PREVIA AL PASAR EL CURSOR • CLIC PARA AUDIO ]",
+      liveHint: "[ CLIC O TOCA EN CUALQUIER VIDEO PARA AUDIO DE CABINA ]",
+      soundLabelMuted: "[ AUDIO ]",
+      soundLabelActive: "[ AUDIO ON ]",
+      videoPlayHint: "AUDIO EN VIVO",
       gigsSectionTag: "FECHAS // BARCELONA",
       gigsSectionTitle: "FECHAS SELECCIONADAS Y PRÓXIMAS",
       gigsViewRaBtn: "VER PERFIL OFICIAL EN RA ↗",
@@ -120,7 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
       scTagRelease: "SOUNDCLOUD RELEASE",
       liveSectionTitle: "// LIVE SESSIONS // BOOTH",
       liveHeadline: "DIRECT FROM THE DECKS",
-      liveHint: "[ HOVER TO PREVIEW • CLICK FOR AUDIO ]",
+      liveHint: "[ CLICK OR TAP ANY VIDEO FOR LIVE BOOTH AUDIO ]",
+      soundLabelMuted: "[ AUDIO ]",
+      soundLabelActive: "[ AUDIO ON ]",
+      videoPlayHint: "LIVE BOOTH AUDIO",
       gigsSectionTag: "TOUR DATES // BARCELONA",
       gigsSectionTitle: "SELECTED GIGS & UPCOMING",
       gigsViewRaBtn: "VIEW OFFICIAL RA PROFILE ↗",
@@ -206,6 +212,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (t[key]) el.placeholder = t[key];
     });
 
+    // Update video sound labels according to active state
+    document.querySelectorAll('.video-card').forEach(card => {
+      const soundLabel = card.querySelector('.sound-label');
+      if (soundLabel) {
+        soundLabel.textContent = card.classList.contains('is-active')
+          ? (t.soundLabelActive || '[ AUDIO ON ]')
+          : (t.soundLabelMuted || '[ AUDIO ]');
+      }
+    });
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
       const isActive = btn.getAttribute('data-lang') === lang;
       btn.classList.toggle('text-[#39FF14]', isActive);
@@ -272,79 +288,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. LIVE SESSIONS VIDEO CONTROLLER (Hover Preview & Sound Toggle)
+  // 7. LIVE SESSIONS VIDEO CONTROLLER (Hover Preview & Full Sound On Click / Tap)
   const videoCards = document.querySelectorAll('.video-card');
 
-  function muteAllVideos() {
+  function stopAllVideos(exceptCard = null) {
     videoCards.forEach(card => {
+      if (card === exceptCard) return;
       const v = card.querySelector('video');
       const btn = card.querySelector('.sound-toggle-btn');
       const label = card.querySelector('.sound-label');
-      if (v) v.muted = true;
+      if (v) {
+        v.muted = true;
+        v.setAttribute('muted', '');
+        v.pause();
+      }
       card.classList.remove('is-active');
       if (btn) btn.classList.remove('is-active');
-      if (label) label.textContent = '[ SOUND ON ]';
+      if (label) label.textContent = i18n[currentLang]?.soundLabelMuted || '[ AUDIO ]';
     });
+  }
+
+  function toggleVideoSound(card) {
+    const video = card.querySelector('video');
+    const soundBtn = card.querySelector('.sound-toggle-btn');
+    const soundLabel = card.querySelector('.sound-label');
+    if (!video) return;
+
+    // Check if currently active and playing unmuted
+    const isCurrentlyActive = card.classList.contains('is-active') && !video.paused && !video.muted;
+
+    if (isCurrentlyActive) {
+      // Pause & mute
+      video.pause();
+      video.muted = true;
+      video.setAttribute('muted', '');
+      card.classList.remove('is-active');
+      if (soundBtn) soundBtn.classList.remove('is-active');
+      if (soundLabel) soundLabel.textContent = i18n[currentLang]?.soundLabelMuted || '[ AUDIO ]';
+    } else {
+      // Stop all other playing videos
+      stopAllVideos(card);
+
+      // Unmute and play with sound
+      video.muted = false;
+      video.removeAttribute('muted');
+      video.volume = 1.0;
+      card.classList.add('is-active');
+      if (soundBtn) soundBtn.classList.add('is-active');
+      if (soundLabel) soundLabel.textContent = i18n[currentLang]?.soundLabelActive || '[ AUDIO ON ]';
+
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.warn('Playback with audio blocked by browser policy:', err);
+          // If browser policy blocked unmuted play without prior interaction, fallback to muted play
+          video.muted = true;
+          video.setAttribute('muted', '');
+          video.play().catch(() => {});
+        });
+      }
+    }
   }
 
   videoCards.forEach(card => {
     const video = card.querySelector('video');
     const soundBtn = card.querySelector('.sound-toggle-btn');
-    const soundLabel = card.querySelector('.sound-label');
 
     if (!video) return;
 
-    // Desktop hover: play preview silently
+    // Ensure initial volume is 100%
+    video.volume = 1.0;
+
+    // Desktop hover: silent preview only if card is NOT active with sound
     card.addEventListener('mouseenter', () => {
-      video.play().catch(() => {});
+      if (!card.classList.contains('is-active')) {
+        video.muted = true;
+        video.setAttribute('muted', '');
+        video.play().catch(() => {});
+      }
     });
 
     card.addEventListener('mouseleave', () => {
-      // If sound is not active, pause to conserve resources
-      if (video.muted) {
+      // If sound is not active, pause preview to save CPU
+      if (!card.classList.contains('is-active')) {
         video.pause();
       }
     });
 
-    // Touch/Mobile tap on card
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('.sound-toggle-btn')) return;
-      if (video.paused) {
-        video.play().catch(() => {});
-      } else if (video.muted) {
-        video.pause();
-      }
+    // Click / Mobile tap anywhere on the card toggles playback WITH AUDIO
+    card.addEventListener('click', () => {
+      toggleVideoSound(card);
     });
+  });
 
-    // Minimalist [ SOUND ON / OFF ] button in bottom corner
-    if (soundBtn) {
-      soundBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const willBeUnmuted = video.muted;
-
-        if (willBeUnmuted) {
-          // Pause main synth audio if playing
-          if (isPlaying) pauseAudio();
-
-          // Mute all other videos
-          muteAllVideos();
-
-          // Unmute current video & play
-          video.muted = false;
-          video.play().catch(() => {});
-          card.classList.add('is-active');
-          soundBtn.classList.add('is-active');
-          if (soundLabel) soundLabel.textContent = '[ SOUND OFF ]';
-        } else {
-          // Mute current video
-          video.muted = true;
-          card.classList.remove('is-active');
-          soundBtn.classList.remove('is-active');
-          if (soundLabel) soundLabel.textContent = '[ SOUND ON ]';
+  // Pause videos when live section is scrolled out of view to save resources
+  const liveSection = document.getElementById('live');
+  if (liveSection && 'IntersectionObserver' in window) {
+    const liveObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          stopAllVideos();
         }
       });
-    }
-  });
+    }, { threshold: 0.1 });
+    liveObserver.observe(liveSection);
+  }
 
   // 8. COPY DIRECT EMAIL TO CLIPBOARD WITH VISUAL FEEDBACK
   const copyEmailBtn = document.getElementById('copyEmailBtn');

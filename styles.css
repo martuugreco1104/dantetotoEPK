@@ -219,12 +219,32 @@ body {
 }
 
 /* 4. Live Sessions Video Cards & Sound Toggle */
+.video-card {
+  cursor: pointer;
+  user-select: none;
+}
+
 .video-card video {
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .video-card:hover video {
   transform: scale(1.03);
+}
+
+.video-card.is-active {
+  border-color: #39FF14 !important;
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.25);
+}
+
+.video-play-indicator {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+}
+
+.video-card.is-active .video-play-indicator {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .sound-toggle-btn {

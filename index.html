@@ -380,8 +380,8 @@
               DIRECTO DESDE LA CABINA
             </h2>
           </div>
-          <p class="text-xs font-mono text-zinc-500 uppercase tracking-wider hidden sm:block" data-i18n="liveHint">
-            [ VISTA PREVIA AL PASAR EL CURSOR • CLIC PARA AUDIO ]
+          <p class="text-xs font-mono text-zinc-400 uppercase tracking-wider block" data-i18n="liveHint">
+            [ CLIC O TOCA EN CUALQUIER VIDEO PARA AUDIO DE CABINA ]
           </p>
         </div>
 
@@ -389,9 +389,21 @@
         <div class="flex md:grid md:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto pb-4 md:pb-0 snap-x snap-mandatory no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
           <!-- Video 1: club1.mp4 -->
           <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
-            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="0">
-              <video src="videos/club1.mp4" poster="videos/club1.webp" muted playsinline loop preload="none" class="w-full h-full object-cover"></video>
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card cursor-pointer select-none" data-video-index="0">
+              <video src="videos/club1.mp4" poster="videos/club1.webp" muted playsinline webkit-playsinline="true" loop preload="metadata" class="w-full h-full object-cover"></video>
               <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador Central Play / Sonido -->
+              <div class="video-play-indicator absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all pointer-events-none z-10">
+                <div class="w-12 h-12 rounded-full bg-black/80 border border-white/25 group-hover:border-[#39FF14] flex items-center justify-center transition-all group-hover:scale-110 shadow-2xl backdrop-blur-sm">
+                  <svg class="w-5 h-5 text-white group-hover:text-[#39FF14] translate-x-0.5 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <span class="mt-2.5 text-[9px] font-mono tracking-widest text-zinc-300 group-hover:text-[#39FF14] uppercase bg-black/80 px-2 py-0.5 border border-white/10 transition-colors" data-i18n="videoPlayHint">
+                  AUDIO EN VIVO
+                </span>
+              </div>
 
               <!-- Indicador de Cabina en Vivo -->
               <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
@@ -416,9 +428,21 @@
 
           <!-- Video 2: club2.mp4 -->
           <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
-            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="1">
-              <video src="videos/club2.mp4" poster="videos/club2.webp" muted playsinline loop preload="none" class="w-full h-full object-cover"></video>
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card cursor-pointer select-none" data-video-index="1">
+              <video src="videos/club2.mp4" poster="videos/club2.webp" muted playsinline webkit-playsinline="true" loop preload="metadata" class="w-full h-full object-cover"></video>
               <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador Central Play / Sonido -->
+              <div class="video-play-indicator absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all pointer-events-none z-10">
+                <div class="w-12 h-12 rounded-full bg-black/80 border border-white/25 group-hover:border-[#39FF14] flex items-center justify-center transition-all group-hover:scale-110 shadow-2xl backdrop-blur-sm">
+                  <svg class="w-5 h-5 text-white group-hover:text-[#39FF14] translate-x-0.5 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <span class="mt-2.5 text-[9px] font-mono tracking-widest text-zinc-300 group-hover:text-[#39FF14] uppercase bg-black/80 px-2 py-0.5 border border-white/10 transition-colors" data-i18n="videoPlayHint">
+                  AUDIO EN VIVO
+                </span>
+              </div>
 
               <!-- Indicador de Cabina en Vivo -->
               <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
@@ -442,9 +466,21 @@
 
           <!-- Video 3: video cabina 1.mp4 -->
           <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
-            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="2">
-              <video src="videos/video cabina 1.mp4" poster="videos/cabina1.webp" muted playsinline loop preload="none" class="w-full h-full object-cover"></video>
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card cursor-pointer select-none" data-video-index="2">
+              <video src="videos/video cabina 1.mp4" poster="videos/cabina1.webp" muted playsinline webkit-playsinline="true" loop preload="metadata" class="w-full h-full object-cover"></video>
               <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador Central Play / Sonido -->
+              <div class="video-play-indicator absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all pointer-events-none z-10">
+                <div class="w-12 h-12 rounded-full bg-black/80 border border-white/25 group-hover:border-[#39FF14] flex items-center justify-center transition-all group-hover:scale-110 shadow-2xl backdrop-blur-sm">
+                  <svg class="w-5 h-5 text-white group-hover:text-[#39FF14] translate-x-0.5 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <span class="mt-2.5 text-[9px] font-mono tracking-widest text-zinc-300 group-hover:text-[#39FF14] uppercase bg-black/80 px-2 py-0.5 border border-white/10 transition-colors" data-i18n="videoPlayHint">
+                  AUDIO EN VIVO
+                </span>
+              </div>
 
               <!-- Indicador de Cabina en Vivo -->
               <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
@@ -468,9 +504,21 @@
 
           <!-- Video 4: video cabina 2.mp4 -->
           <div class="min-w-[76vw] sm:min-w-[48vw] md:min-w-0 snap-center flex flex-col group">
-            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card" data-video-index="3">
-              <video src="videos/video cabina 2.mp4" poster="videos/cabina2.webp" muted playsinline loop preload="none" class="w-full h-full object-cover"></video>
+            <div class="relative w-full aspect-[9/16] bg-[#0c0c0c] border border-[#27272a] group-hover:border-zinc-400 overflow-hidden transition-colors video-card spotlight-card cursor-pointer select-none" data-video-index="3">
+              <video src="videos/video cabina 2.mp4" poster="videos/cabina2.webp" muted playsinline webkit-playsinline="true" loop preload="metadata" class="w-full h-full object-cover"></video>
               <div class="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+
+              <!-- Indicador Central Play / Sonido -->
+              <div class="video-play-indicator absolute inset-0 flex flex-col items-center justify-center bg-black/40 group-hover:bg-black/20 transition-all pointer-events-none z-10">
+                <div class="w-12 h-12 rounded-full bg-black/80 border border-white/25 group-hover:border-[#39FF14] flex items-center justify-center transition-all group-hover:scale-110 shadow-2xl backdrop-blur-sm">
+                  <svg class="w-5 h-5 text-white group-hover:text-[#39FF14] translate-x-0.5 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <span class="mt-2.5 text-[9px] font-mono tracking-widest text-zinc-300 group-hover:text-[#39FF14] uppercase bg-black/80 px-2 py-0.5 border border-white/10 transition-colors" data-i18n="videoPlayHint">
+                  AUDIO EN VIVO
+                </span>
+              </div>
 
               <!-- Indicador de Cabina en Vivo -->
               <div class="absolute top-3 left-3 z-20 flex items-center gap-2 px-2.5 py-1 bg-black/85 backdrop-blur-md border border-white/15 pointer-events-none select-none">
