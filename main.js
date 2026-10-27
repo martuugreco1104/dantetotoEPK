@@ -299,7 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = card.querySelector('.sound-label');
       if (v) {
         v.muted = true;
-        v.setAttribute('muted', '');
         v.pause();
       }
       card.classList.remove('is-active');
@@ -308,45 +307,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function playCardWithAudio(card) {
+    const video = card.querySelector('video');
+    const soundBtn = card.querySelector('.sound-toggle-btn');
+    const soundLabel = card.querySelector('.sound-label');
+    if (!video) return;
+
+    // Stop all other playing videos
+    stopAllVideos(card);
+
+    // Reset audio settings for full sound
+    video.defaultMuted = false;
+    video.muted = false;
+    video.removeAttribute('muted');
+    video.volume = 1.0;
+
+    card.classList.add('is-active');
+    if (soundBtn) soundBtn.classList.add('is-active');
+    if (soundLabel) soundLabel.textContent = i18n[currentLang]?.soundLabelActive || '[ AUDIO ON ]';
+
+    // In desktop Chrome, resetting playback forces connection to the audio output device
+    if (!video.paused) {
+      video.pause();
+    }
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(err => {
+        console.warn('Playback error:', err);
+      });
+    }
+  }
+
   function toggleVideoSound(card) {
     const video = card.querySelector('video');
     const soundBtn = card.querySelector('.sound-toggle-btn');
     const soundLabel = card.querySelector('.sound-label');
     if (!video) return;
 
-    // Check if currently active and playing unmuted
-    const isCurrentlyActive = card.classList.contains('is-active') && !video.paused && !video.muted;
+    const isPlayingWithAudio = card.classList.contains('is-active') && !video.muted;
 
-    if (isCurrentlyActive) {
+    if (isPlayingWithAudio) {
       // Pause & mute
       video.pause();
       video.muted = true;
-      video.setAttribute('muted', '');
       card.classList.remove('is-active');
       if (soundBtn) soundBtn.classList.remove('is-active');
       if (soundLabel) soundLabel.textContent = i18n[currentLang]?.soundLabelMuted || '[ AUDIO ]';
     } else {
-      // Stop all other playing videos
-      stopAllVideos(card);
-
-      // Unmute and play with sound
-      video.muted = false;
-      video.removeAttribute('muted');
-      video.volume = 1.0;
-      card.classList.add('is-active');
-      if (soundBtn) soundBtn.classList.add('is-active');
-      if (soundLabel) soundLabel.textContent = i18n[currentLang]?.soundLabelActive || '[ AUDIO ON ]';
-
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(err => {
-          console.warn('Playback with audio blocked by browser policy:', err);
-          // If browser policy blocked unmuted play without prior interaction, fallback to muted play
-          video.muted = true;
-          video.setAttribute('muted', '');
-          video.play().catch(() => {});
-        });
-      }
+      playCardWithAudio(card);
     }
   }
 
@@ -356,32 +364,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!video) return;
 
-    // Ensure initial volume is 100%
     video.volume = 1.0;
 
-    // Desktop hover: silent preview only if card is NOT active with sound
+    // Desktop hover: try playing with sound if user has interacted with page; otherwise silent preview
     card.addEventListener('mouseenter', () => {
-      if (!card.classList.contains('is-active')) {
-        video.muted = true;
-        video.setAttribute('muted', '');
-        video.play().catch(() => {});
+      if (card.classList.contains('is-active')) return;
+
+      video.defaultMuted = false;
+      video.muted = false;
+      video.removeAttribute('muted');
+      video.volume = 1.0;
+
+      const p = video.play();
+      if (p !== undefined) {
+        p.then(() => {
+          // Browser allowed unmuted hover playback
+          card.classList.add('is-active');
+          if (soundBtn) soundBtn.classList.add('is-active');
+          if (soundLabel) soundLabel.textContent = i18n[currentLang]?.soundLabelActive || '[ AUDIO ON ]';
+        }).catch(() => {
+          // Fallback to silent preview if browser policy requires a click first
+          video.muted = true;
+          video.play().catch(() => {});
+        });
       }
     });
 
     card.addEventListener('mouseleave', () => {
-      // If sound is not active, pause preview to save CPU
+      // Only pause if this was a silent preview and not actively unmuted
       if (!card.classList.contains('is-active')) {
         video.pause();
       }
     });
 
-    // Click / Mobile tap anywhere on the card toggles playback WITH AUDIO
-    card.addEventListener('click', () => {
+    // Button click
+    if (soundBtn) {
+      soundBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleVideoSound(card);
+      });
+    }
+
+    // Card click / Mobile tap anywhere on card
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.sound-toggle-btn')) return;
       toggleVideoSound(card);
     });
   });
 
-  // Pause videos when live section is scrolled out of view to save resources
+  // Pause videos when live section is completely scrolled out of view
   const liveSection = document.getElementById('live');
   if (liveSection && 'IntersectionObserver' in window) {
     const liveObserver = new IntersectionObserver((entries) => {
@@ -390,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
           stopAllVideos();
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0 });
     liveObserver.observe(liveSection);
   }
 
